@@ -110,7 +110,7 @@ export default function App() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-c21.png" alt="Century 21" className="h-16 w-16 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-c21.svg" alt="Century 21" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
             <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
             <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />

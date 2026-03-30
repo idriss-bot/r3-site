@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <!-- C arc mark -->
+  <path d="M58 12 A34 34 0 1 0 58 68" stroke="#B09272" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <!-- 21 inside the C -->
+  <text x="56" y="47" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#B09272" text-anchor="middle">21</text>
+  <!-- CENTURY 21. text -->
+  <text x="140" y="48" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" fill="#B09272" text-anchor="middle" letter-spacing="4">CENTURY 21.</text>
+</svg>
