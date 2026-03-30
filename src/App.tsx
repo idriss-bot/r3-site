@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle2, Play, Star, ChevronDown, ArrowRight, Menu, X } from 'lucide-react';
+import { CheckCircle2, Star, ChevronDown, ArrowRight, Menu, X } from 'lucide-react';
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) {
   return (
@@ -32,7 +32,7 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="text-2xl font-heading tracking-widest z-50">R<span className="text-primary italic">3</span></div>
+          <img src="/images/logo-r3.png" alt="R3" className="h-12 w-auto z-50" />
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-heading">
@@ -42,9 +42,9 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-4 z-50">
-            <button className="hidden md:block border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
+            <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="hidden md:block border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
               Prendre rendez-vous
-            </button>
+            </a>
             <button className="md:hidden text-white p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -57,9 +57,9 @@ export default function App() {
             <a href="#etudes-de-cas" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Études de cas</a>
             <a href="#comment-ca-marche" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Comment ça marche</a>
             <a href="#offres" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Nos offres</a>
-            <button className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4">
+            <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4 block text-center">
               Prendre rendez-vous
-            </button>
+            </a>
           </div>
         )}
       </nav>
@@ -82,18 +82,21 @@ export default function App() {
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <button className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Je me dédouble grâce à l'IA
-              </button>
+              </a>
             </FadeIn>
           </div>
           
           <FadeIn delay={0.5}>
-            <div className="mt-32 max-w-5xl mx-auto aspect-video glass-panel rounded-2xl flex items-center justify-center relative overflow-hidden group cursor-pointer shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-80"></div>
-              <div className="w-24 h-24 rounded-full border border-white/20 flex items-center justify-center z-10 group-hover:scale-110 group-hover:border-primary/50 transition-all duration-500 bg-bg/50 backdrop-blur-md">
-                <Play className="w-8 h-8 text-white ml-2 group-hover:text-primary transition-colors duration-500" fill="currentColor" />
-              </div>
+            <div className="mt-32 max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/OOHvfBswnl0"
+                title="R3 — Vidéos IA Immobilier"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </FadeIn>
         </div>
@@ -105,13 +108,13 @@ export default function App() {
           <p className="text-sm md:text-base text-white mb-12 font-body max-w-3xl mx-auto text-balance leading-relaxed">
             Ils sont chez Orpi, Century 21, IAD, Keller Williams, SAFTI ou effiCity. <span className="gold-gradient-text font-semibold whitespace-nowrap">Ils nous font confiance.</span>
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-100 transition-all duration-700 text-white">
-            <span className="text-xl font-heading tracking-widest">ORPI</span>
-            <span className="text-xl font-body font-light tracking-widest">Century 21</span>
-            <span className="text-2xl font-heading italic tracking-widest">iad</span>
-            <span className="text-xl font-body font-light tracking-widest">Keller Williams</span>
-            <span className="text-xl font-body tracking-[0.3em]">SAFTI</span>
-            <span className="text-xl font-body font-light tracking-widest">effiCity</span>
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
+            <img src="/images/logo-orpi.png" alt="Orpi" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-c21.png" alt="Century 21" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-iad.png" alt="IAD" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-kw.png" alt="Keller Williams" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-safti.png" alt="SAFTI" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-efficity.png" alt="effiCity" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
           </div>
         </div>
       </section>
@@ -134,8 +137,15 @@ export default function App() {
                   <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur Instagram</div>
                 </div>
                 <div className="w-full md:w-2/3">
-                  <h3 className="text-2xl font-heading mb-1 text-white">Fabian Bruna</h3>
-                  <p className="text-xs uppercase tracking-widest text-primary/80 mb-6 font-body">Directeur Octo Immo à Toulouse</p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
+                      <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover grayscale opacity-90" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-heading text-white">Fabian Bruna</h3>
+                      <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Directeur Octo Immo à Toulouse</p>
+                    </div>
+                  </div>
                   <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
                     <p>Son agence avait gagné 59 exclusivités en 2024 et son CA en transaction était en <span className="gold-gradient-text font-semibold">baisse de 36 %.</span></p>
                     <p>Sur les 12 premiers mois de ses vidéos IA, il a dépassé <span className="gold-gradient-text font-semibold whitespace-nowrap">1 000 000 de vues</span> sur les réseaux sociaux.</p>
@@ -152,8 +162,15 @@ export default function App() {
                   <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur Facebook</div>
                 </div>
                 <div className="w-full md:w-2/3">
-                  <h3 className="text-2xl font-heading mb-1 text-white">Dorothée Leprince</h3>
-                  <p className="text-xs uppercase tracking-widest text-primary/80 mb-6 font-body">Conseillère immo à Nantes</p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
+                      <img src="/images/dorothee.jpg" alt="Dorothée Leprince" className="w-full h-full object-cover grayscale opacity-90" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-heading text-white">Dorothée Leprince</h3>
+                      <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Conseillère immo à Nantes</p>
+                    </div>
+                  </div>
                   <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
                     <p>Avant notre collaboration, Dorothée faisait <span className="gold-gradient-text font-semibold">difficilement 7 ventes</span> par an <span className="whitespace-nowrap">sur LinkedIn et Facebook.</span></p>
                     <p>Dès qu'on a pris en charge sa visibilité avec nos contenus, <span className="whitespace-nowrap">son <span className="gold-gradient-text font-semibold">activité a décollé.</span></span></p>
@@ -170,8 +187,15 @@ export default function App() {
                   <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur LinkedIn</div>
                 </div>
                 <div className="w-full md:w-2/3">
-                  <h3 className="text-2xl font-heading mb-1 text-white">Sabrina Hamoumou</h3>
-                  <p className="text-xs uppercase tracking-widest text-primary/80 mb-6 font-body">Conseillère immo à Clermont</p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
+                      <img src="/images/sabrina.jpg" alt="Sabrina Hamoumou" className="w-full h-full object-cover grayscale opacity-90" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-heading text-white">Sabrina Hamoumou</h3>
+                      <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Conseillère immo à Clermont</p>
+                    </div>
+                  </div>
                   <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
                     <p>Avant de se lancer dans les vidéos IA, nous publiions les <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">posts LinkedIn</span> de Sabrina.</span></p>
                     <p>Avec simplement du texte et des images, nous avons réussi à <span className="whitespace-nowrap">lui générer <span className="gold-gradient-text font-semibold">40 000 €.</span></span></p>
@@ -234,7 +258,7 @@ export default function App() {
               <FadeIn>
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-bg/90 via-bg/20 to-transparent z-10 mix-blend-overlay"></div>
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Idriss Drira" className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 hover:scale-105" />
+                  <img src="/images/idriss.jpg" alt="Idriss Drira" className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 hover:scale-105" />
                 </div>
               </FadeIn>
             </div>
@@ -271,7 +295,7 @@ export default function App() {
               </blockquote>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="w-20 h-20 rounded-full bg-surface-light overflow-hidden border border-white/10 shadow-lg">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Fabian Bruna" className="w-full h-full object-cover grayscale opacity-90" />
+                  <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover grayscale opacity-90" />
                 </div>
                 <div className="text-center md:text-left">
                   <div className="font-heading text-xl text-white mb-1">Fabian Bruna</div>
@@ -361,9 +385,9 @@ export default function App() {
           
           <FadeIn delay={0.4}>
             <div className="mt-20 text-center">
-              <button className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Je me dédouble grâce à l'IA
-              </button>
+              </a>
             </div>
           </FadeIn>
         </div>
@@ -418,7 +442,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-bg py-16 border-t border-white/5 text-center text-gray-600 font-light text-[10px] uppercase tracking-[0.2em]">
         <div className="container mx-auto px-6">
-          <div className="text-2xl font-heading tracking-widest mb-8 text-white normal-case">R<span className="text-primary italic">3</span></div>
+          <img src="/images/logo-r3.png" alt="R3" className="h-12 w-auto mx-auto mb-8" />
           <p>© {new Date().getFullYear()} R3. <span className="whitespace-nowrap">Tous droits réservés.</span></p>
         </div>
       </footer>
