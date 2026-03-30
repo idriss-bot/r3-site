@@ -82,7 +82,7 @@ export default function App() {
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Je me dédouble grâce à l'IA
               </a>
             </FadeIn>
@@ -139,7 +139,7 @@ export default function App() {
                 <div className="w-full md:w-2/3">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
-                      <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover grayscale opacity-90" />
+                      <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-heading text-white">Fabian Bruna</h3>
@@ -164,7 +164,7 @@ export default function App() {
                 <div className="w-full md:w-2/3">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
-                      <img src="/images/dorothee.jpg" alt="Dorothée Leprince" className="w-full h-full object-cover grayscale opacity-90" />
+                      <img src="/images/dorothee.jpg" alt="Dorothée Leprince" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-heading text-white">Dorothée Leprince</h3>
@@ -189,7 +189,7 @@ export default function App() {
                 <div className="w-full md:w-2/3">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
-                      <img src="/images/sabrina.jpg" alt="Sabrina Hamoumou" className="w-full h-full object-cover grayscale opacity-90" />
+                      <img src="/images/sabrina.jpg" alt="Sabrina Hamoumou" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-heading text-white">Sabrina Hamoumou</h3>
@@ -258,7 +258,7 @@ export default function App() {
               <FadeIn>
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-bg/90 via-bg/20 to-transparent z-10 mix-blend-overlay"></div>
-                  <img src="/images/idriss.jpg" alt="Idriss Drira" className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 hover:scale-105" />
+                  <img src="/images/idriss.jpg" alt="Idriss Drira" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                 </div>
               </FadeIn>
             </div>
@@ -295,7 +295,7 @@ export default function App() {
               </blockquote>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="w-20 h-20 rounded-full bg-surface-light overflow-hidden border border-white/10 shadow-lg">
-                  <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover grayscale opacity-90" />
+                  <img src="/images/fabian.jpg" alt="Fabian Bruna" className="w-full h-full object-cover" />
                 </div>
                 <div className="text-center md:text-left">
                   <div className="font-heading text-xl text-white mb-1">Fabian Bruna</div>
@@ -385,7 +385,7 @@ export default function App() {
           
           <FadeIn delay={0.4}>
             <div className="mt-20 text-center">
-              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Je me dédouble grâce à l'IA
               </a>
             </div>
@@ -432,7 +432,7 @@ export default function App() {
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <button className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+            <button className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
               Je me dédouble grâce à l'IA
             </button>
           </FadeIn>
