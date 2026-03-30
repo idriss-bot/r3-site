@@ -432,9 +432,9 @@ export default function App() {
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <button className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+            <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
               Je me dédouble grâce à l'IA
-            </button>
+            </a>
           </FadeIn>
         </div>
       </section>
