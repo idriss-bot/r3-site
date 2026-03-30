@@ -72,7 +72,7 @@ export default function App() {
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                Des vidéos de vous à partir d'une <span className="italic gold-gradient-text">simple photo</span> <span className="whitespace-nowrap">grâce à l'IA.</span>
+                50 vidéos de vous à partir d'une <span className="italic gold-gradient-text">simple photo</span> <span className="whitespace-nowrap">grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
