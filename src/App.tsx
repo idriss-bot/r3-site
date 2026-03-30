@@ -92,7 +92,7 @@ export default function App() {
             <div className="mt-32 max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/OOHvfBswnl0"
+                src="https://www.youtube.com/embed/KlJki5qhrnk"
                 title="R3 — Vidéos IA Immobilier"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
