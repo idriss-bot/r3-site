@@ -444,7 +444,7 @@ export default function App() {
         <div className="container mx-auto px-6">
           <img src="/images/logo-r3.png" alt="R3" className="h-12 w-auto mx-auto mb-8" />
           <p>© {new Date().getFullYear()} R3. <span className="whitespace-nowrap">Tous droits réservés.</span></p>
-          <p className="mt-4"><a href="/mentions-legales/" className="hover:text-white transition-colors">Mentions légales</a></p>
+          <p className="mt-4"><a href="/mentions-legales/" className="text-gray-400 hover:text-white transition-colors">Mentions légales</a></p>
         </div>
       </footer>
     </div>
