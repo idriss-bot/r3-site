@@ -109,12 +109,12 @@ export default function App() {
             Ils sont chez Orpi, Century 21, IAD, Keller Williams, SAFTI ou effiCity. <span className="gold-gradient-text font-semibold whitespace-nowrap">Ils nous font confiance.</span>
           </p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
-            <img src="/images/logo-orpi.png" alt="Orpi" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-c21.png" alt="Century 21" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-iad.png" alt="IAD" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-kw.png" alt="Keller Williams" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-safti.png" alt="SAFTI" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-efficity.png" alt="effiCity" className="h-8 md:h-10 w-auto opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-c21.png" alt="Century 21" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-efficity.png" alt="effiCity" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
           </div>
         </div>
       </section>
