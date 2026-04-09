@@ -47,7 +47,7 @@ export default function MasterclassVideoIA() {
   };
 
   return (
-    <div className="min-h-screen bg-bg text-white font-body selection:bg-primary selection:text-white relative flex flex-col">
+    <div className="min-h-screen bg-bg text-white font-body selection:bg-primary selection:text-white relative flex flex-col overflow-x-hidden">
       {/* Noise texture overlay */}
       <div className="bg-noise"></div>
 

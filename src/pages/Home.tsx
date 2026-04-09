@@ -27,7 +27,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-bg text-white font-body selection:bg-primary selection:text-white relative">
+    <div className="min-h-screen bg-bg text-white font-body selection:bg-primary selection:text-white relative overflow-x-hidden">
       <div className="bg-noise"></div>
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-white/5">
