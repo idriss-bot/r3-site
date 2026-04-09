@@ -102,16 +102,16 @@ export default function MasterclassVideoIA() {
                     onChange={(e) => setPrenom(e.target.value)}
                     disabled={loading}
                     required
-                    className="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 font-body text-sm focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-colors disabled:opacity-50"
+                    className="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white font-body text-sm focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-colors disabled:opacity-50"
                   />
                   <input
                     type="email"
-                    placeholder="Votre email"
+                    placeholder="Votre email professionnel"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
                     required
-                    className="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 font-body text-sm focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-colors disabled:opacity-50"
+                    className="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white font-body text-sm focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-colors disabled:opacity-50"
                   />
                   <button
                     type="submit"
@@ -133,7 +133,7 @@ export default function MasterclassVideoIA() {
                   )}
 
                   <p className="text-gray-600 text-xs text-center font-light mt-1">
-                    Vos données restent confidentielles. Aucun spam.
+                    En m'inscrivant, j'accepte de recevoir des mails de R3.
                   </p>
                 </form>
               )}
