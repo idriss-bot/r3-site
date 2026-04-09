@@ -78,9 +78,15 @@ export default function MasterclassVideoIA() {
           {/* Image + Form — side by side on desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
 
-            {/* Image placeholder */}
-            <div className="aspect-video bg-surface-light rounded-2xl flex items-center justify-center border border-white/10 shadow-lg">
-              <span className="text-gray-500 font-heading text-xs tracking-[0.2em] uppercase">Image masterclass</span>
+            {/* Video */}
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/N49Yz8aGsXc"
+                title="Masterclass Vidéo 100% IA"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
 
             {/* Form card */}
