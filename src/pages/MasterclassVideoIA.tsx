@@ -68,7 +68,8 @@ export default function MasterclassVideoIA() {
           {/* Headings */}
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.1] tracking-tight text-balance">
-              <span className="italic gold-gradient-text">Dupliquez-vous</span> virtuellement
+              <span className="italic gold-gradient-text">Dupliquez-vous</span> virtuellement<br />
+              <span className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-300">Mardi 21 avril 2026 à 12h</span>
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-light text-balance">
               La masterclass gratuite qui vous montre comment créer des vidéos à votre image grâce à l'IA (à partir d'une simple photo).
