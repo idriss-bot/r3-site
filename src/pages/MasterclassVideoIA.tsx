@@ -139,7 +139,7 @@ export default function MasterclassVideoIA() {
                     <p className="text-red-400 text-xs text-center font-light">{error}</p>
                   )}
 
-                  <p className="text-gray-600 text-xs text-center font-light mt-1">
+                  <p className="text-white text-xs text-center font-light mt-1">
                     En m'inscrivant, j'accepte de recevoir des mails de R3.
                   </p>
                 </form>
