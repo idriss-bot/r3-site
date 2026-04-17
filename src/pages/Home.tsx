@@ -367,7 +367,7 @@ export default function Home() {
               <div className="bg-bg border border-white/5 rounded-3xl p-12 flex flex-col h-full hover:border-white/10 transition-colors duration-500">
                 <h3 className="text-2xl font-heading mb-12 gold-gradient-text">Pack 6 mois</h3>
                 <div className="mb-12 pb-12 border-b border-white/5">
-                  <div className="text-5xl font-heading font-light mb-2 text-white">3 000 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em]">HT</span></div>
+                  <div className="text-5xl font-heading font-light mb-2 text-white">3 600 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em]">HT</span></div>
                   <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">frais de création</div>
                   <div className="text-2xl font-heading font-light mt-8 text-white">+ 200 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">HT / mois</span></div>
                   <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] mt-2 whitespace-nowrap">programmation & diffusion</div>
