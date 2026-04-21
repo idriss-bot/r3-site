@@ -354,8 +354,8 @@ export default function Home() {
                   <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] mt-2 whitespace-nowrap">programmation & diffusion</div>
                 </div>
                 <ul className="space-y-6 flex-grow text-sm font-light text-gray-300">
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">150 publications</span> au total</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>50 vidéos · <span className="whitespace-nowrap">50 carrousels · 50 posts</span></span></li>
+                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">180 publications</span> au total</span></li>
+                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>60 vidéos · <span className="whitespace-nowrap">60 carrousels · 60 posts</span></span></li>
                   <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>3 publications / semaine</span></li>
                   <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>Instagram, Facebook, LinkedIn, TikTok</span></li>
                 </ul>
