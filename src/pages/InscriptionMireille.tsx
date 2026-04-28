@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { parsePhoneNumber } from 'libphonenumber-js';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 
 const COUNTRIES = [
@@ -8,27 +7,60 @@ const COUNTRIES = [
   'Canada', 'USA', 'UK', 'Espagne', 'Italie', 'Portugal', 'Allemagne',
 ];
 
-const COUNTRY_ISO: Record<string, string> = {
-  France: 'FR', Belgique: 'BE', Suisse: 'CH', Luxembourg: 'LU',
-  Canada: 'CA', USA: 'US', UK: 'GB', Espagne: 'ES',
-  Italie: 'IT', Portugal: 'PT', Allemagne: 'DE',
+const COUNTRY_TO_CODE: Record<string, string> = {
+  France: '33', Belgique: '32', Suisse: '41', Luxembourg: '352',
+  Canada: '1', USA: '1', UK: '44', Espagne: '34',
+  Italie: '39', Portugal: '351', Allemagne: '49',
 };
 
-const COUNTRY_DIAL: Record<string, string> = {
-  France: '+33', Belgique: '+32', Suisse: '+41', Luxembourg: '+352',
-  Canada: '+1', USA: '+1', UK: '+44', Espagne: '+34',
-  Italie: '+39', Portugal: '+351', Allemagne: '+49',
+const COUNTRY_NAMES: Record<string, string> = Object.fromEntries(
+  Object.entries(COUNTRY_TO_CODE).map(([name, code]) => [code, name])
+);
+
+const COUNTRY_EXAMPLES: Record<string, string> = {
+  '33': '06 12 34 56 78 ou +33 6 12 34 56 78',
+  '32': '04 12 34 56 78 ou +32 4 12 34 56 78',
+  '41': '079 123 45 67 ou +41 79 123 45 67',
+  '1': '514 123 4567 ou +1 514 123 4567',
+  '352': '621 12 34 56 ou +352 621 12 34 56',
+  '44': '07700 900123 ou +44 7700 900123',
+  '34': '612 34 56 78 ou +34 612 34 56 78',
+  '39': '312 345 6789 ou +39 312 345 6789',
+  '351': '912 345 678 ou +351 912 345 678',
+  '49': '0151 12345678 ou +49 151 12345678',
 };
 
-function normalizePhone(raw: string, country: string): string | null {
-  try {
-    const iso = COUNTRY_ISO[country] as Parameters<typeof parsePhoneNumber>[1];
-    const parsed = parsePhoneNumber(raw, iso);
-    if (!parsed || !parsed.isValid()) return null;
-    return parsed.number.replace('+', '');
-  } catch {
-    return null;
+function normalizePhone(raw: string, country: string): string {
+  const countryCode = COUNTRY_TO_CODE[country] ?? '33';
+
+  // 1. Strip espaces, tirets, points, parenthèses, slashes
+  const cleaned = raw.replace(/[\s\-\.\/\(\)]/g, '');
+
+  // 2. Format : optionnel + en tête, puis chiffres uniquement
+  if (!/^\+?\d+$/.test(cleaned)) {
+    throw new Error('Le numéro contient des caractères invalides. Utilisez uniquement des chiffres.');
   }
+
+  // 3. Commence par +
+  if (cleaned.startsWith('+')) {
+    const digits = cleaned.slice(1);
+    if (!digits.startsWith(countryCode)) {
+      const countryName = COUNTRY_NAMES[countryCode] ?? 'votre pays';
+      const example = COUNTRY_EXAMPLES[countryCode] ?? '';
+      throw new Error(`Vous êtes en ${countryName}, veuillez utiliser le format correspondant (${example}).`);
+    }
+    if (digits.length < countryCode.length + 8 || digits.length > 15) {
+      throw new Error('Numéro invalide : trop court ou trop long.');
+    }
+    return `+${digits}`;
+  }
+
+  // 4. Sans +
+  const digits = cleaned.startsWith('0') ? cleaned.slice(1) : cleaned;
+  if (digits.length < 8 || countryCode.length + digits.length > 15) {
+    throw new Error('Numéro invalide : trop court ou trop long.');
+  }
+  return `+${countryCode}${digits}`;
 }
 
 function formatFileSize(bytes: number): string {
@@ -96,8 +128,12 @@ export default function InscriptionMireille() {
     if (!photo) errors.photo = 'Une photo est requise.';
     if (!cgu) errors.cgu = 'Vous devez accepter les CGU.';
 
-    const normalizedPhone = normalizePhone(phone, country);
-    if (!normalizedPhone) errors.phone = 'Numéro de téléphone invalide pour ce pays.';
+    let normalizedPhone = '';
+    try {
+      normalizedPhone = normalizePhone(phone, country);
+    } catch (err) {
+      errors.phone = err instanceof Error ? err.message : 'Numéro de téléphone invalide.';
+    }
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
@@ -110,7 +146,7 @@ export default function InscriptionMireille() {
       formData.append('name', name.trim());
       formData.append('first_name', firstName.trim());
       formData.append('email', email.trim().toLowerCase());
-      formData.append('phone', normalizedPhone!);
+      formData.append('phone', normalizedPhone);
       formData.append('country', country);
       formData.append('cgu', 'true');
       formData.append('photo', photo!);
@@ -201,12 +237,6 @@ export default function InscriptionMireille() {
           </div>
 
           <div className="glass-panel rounded-2xl p-6 md:p-10 shadow-2xl">
-            {formError && (
-              <div className="mb-6 bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 text-sm">
-                {formError}
-              </div>
-            )}
-
             <form onSubmit={handleSubmit} noValidate className="space-y-5">
               {/* Prénom + Nom */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -264,18 +294,13 @@ export default function InscriptionMireille() {
               {/* Téléphone */}
               <div>
                 <label className="block text-sm text-white/60 mb-1.5">Téléphone *</label>
-                <div className="flex items-center gap-2">
-                  <span className="flex-shrink-0 bg-surface-light border border-white/10 rounded-xl px-3 py-3 text-white/50 text-sm min-w-[60px] text-center">
-                    {COUNTRY_DIAL[country]}
-                  </span>
-                  <input
-                    type="tel"
-                    value={phone}
-                    onChange={e => setPhone(e.target.value)}
-                    placeholder="06 12 34 56 78"
-                    className={`flex-1 ${inputClass('phone')}`}
-                  />
-                </div>
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={e => setPhone(e.target.value)}
+                  placeholder="+33 6 12 34 56 78 ou 06 12 34 56 78"
+                  className={inputClass('phone')}
+                />
                 {fieldErrors.phone && <p className="mt-1 text-xs text-red-400">{fieldErrors.phone}</p>}
               </div>
 
@@ -378,6 +403,12 @@ export default function InscriptionMireille() {
                   'S\'inscrire'
                 )}
               </button>
+
+              {formError && (
+                <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 text-sm">
+                  {formError}
+                </div>
+              )}
             </form>
           </div>
         </div>
