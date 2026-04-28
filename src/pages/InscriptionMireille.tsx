@@ -77,6 +77,7 @@ export default function InscriptionMireille() {
   const [photo, setPhoto] = useState<File | null>(null);
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState('');
+  const [identityConfirmed, setIdentityConfirmed] = useState(false);
   const [cgu, setCgu] = useState(false);
 
   const [loading, setLoading] = useState(false);
@@ -126,6 +127,7 @@ export default function InscriptionMireille() {
     if (!name.trim()) errors.name = 'Le nom est requis.';
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Email invalide.';
     if (!photo) errors.photo = 'Une photo est requise.';
+    if (!identityConfirmed) errors.identityConfirmed = 'Vous devez confirmer que la personne sur la photo est bien vous-même.';
     if (!cgu) errors.cgu = 'Vous devez accepter les CGU.';
 
     let normalizedPhone = '';
@@ -148,6 +150,7 @@ export default function InscriptionMireille() {
       formData.append('email', email.trim().toLowerCase());
       formData.append('phone', normalizedPhone);
       formData.append('country', country);
+      formData.append('identity_confirmed', 'true');
       formData.append('cgu', 'true');
       formData.append('photo', photo!);
 
@@ -361,6 +364,22 @@ export default function InscriptionMireille() {
                 {(photoError || fieldErrors.photo) && (
                   <p className="mt-1 text-xs text-red-400">{photoError || fieldErrors.photo}</p>
                 )}
+              </div>
+
+              {/* Confirmation identité */}
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={identityConfirmed}
+                    onChange={e => setIdentityConfirmed(e.target.checked)}
+                    className="mt-0.5 accent-primary w-4 h-4 flex-shrink-0"
+                  />
+                  <span className="text-sm text-white/70 leading-relaxed">
+                    Je certifie que la personne sur la photo est bien moi-même. Je comprends que créer un avatar IA à partir de la photo d'une autre personne sans son consentement est illégal et peut entraîner des poursuites.
+                  </span>
+                </label>
+                {fieldErrors.identityConfirmed && <p className="mt-1 text-xs text-red-400">{fieldErrors.identityConfirmed}</p>}
               </div>
 
               {/* CGU */}
