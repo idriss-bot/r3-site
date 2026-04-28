@@ -241,147 +241,147 @@ export default function CGU() {
 
             {showTools && (
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 my-6 list-disc list-inside font-heading text-sm text-gray-400">
-                <li><a href="https://www.adcreative.ai/terms-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AdCreative.ai</a></li>
-                <li><a href="https://www.adobe.com/legal/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Adobe Firefly</a></li>
-                <li><a href="https://www.adobe.com/legal/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Adobe Firefly Video / Premiere Generative Extend</a></li>
-                <li><a href="https://aiease.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Aiease (PicWish)</a></li>
-                <li><a href="https://akool.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Akool</a></li>
-                <li><a href="https://www.arcads.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Arcads.ai</a></li>
-                <li><a href="https://www.argil.ai/legal-mentions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Argil</a></li>
-                <li><a href="https://www.artbreeder.com/terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Artbreeder</a></li>
-                <li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/master/LICENSE.txt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AUTOMATIC1111 (Stable Diffusion WebUI)</a></li>
+                <li><a href="https://vectorizer.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vectorizer.AI</a></li>
+                <li><a href="https://magnific.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magnific AI</a></li>
+                <li><a href="https://github.com/Wan-Video/Wan2.1/blob/main/LICENSE.txt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Wan (Alibaba, open source)</a></li>
                 <li><a href="https://avatarify.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Avatarify</a></li>
-                <li><a href="https://www.banuba.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Banuba SDK</a></li>
-                <li><a href="https://www.basedlabs.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">BasedLabs AI Face Swap</a></li>
-                <li><a href="https://bestphoto.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">BestPhotoAI</a></li>
-                <li><a href="https://www.canva.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Canva (Magic Studio / Magic Media)</a></li>
-                <li><a href="https://www.capcut.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">CapCut AI</a></li>
-                <li><a href="https://www.captions.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Captions</a></li>
-                <li><a href="https://civitai.com/content/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Civitai</a></li>
-                <li><a href="https://www.colossyan.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Colossyan</a></li>
-                <li><a href="https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ComfyUI</a></li>
-                <li><a href="https://www.craiyon.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Craiyon</a></li>
-                <li><a href="https://www.d-id.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">D-ID</a></li>
-                <li><a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DALL·E 3 / GPT Image (ChatGPT Images)</a></li>
-                <li><a href="https://github.com/hacksider/Deep-Live-Cam/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Deep-Live-Cam</a></li>
-                <li><a href="https://deepai.org/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepAI</a></li>
-                <li><a href="https://www.aistudios.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepBrain AI / AI Studios</a></li>
-                <li><a href="https://github.com/iperov/DeepFaceLab/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepFaceLab</a></li>
-                <li><a href="https://github.com/iperov/DeepFaceLive/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepFaceLive</a></li>
-                <li><a href="https://deepfakesweb.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Deepfakes Web</a></li>
-                <li><a href="https://www.deepswap.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepSwap</a></li>
-                <li><a href="https://deepswapper.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepSwapper</a></li>
-                <li><a href="https://www.descript.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Descript</a></li>
-                <li><a href="https://domoai.app/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Domo AI</a></li>
-                <li><a href="https://www.wombo.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Dream by WOMBO</a></li>
-                <li><a href="https://elai.io/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Elai.io</a></li>
-                <li><a href="https://elevenlabs.io/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ElevenLabs</a></li>
-                <li><a href="https://github.com/facefusion/facefusion/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceFusion</a></li>
-                <li><a href="https://www.facemagic.ai/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceMagic</a></li>
-                <li><a href="https://www.faceplay.cc/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FacePlay</a></li>
-                <li><a href="https://github.com/deepfakes/faceswap/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Faceswap (faceswap.dev)</a></li>
-                <li><a href="https://faceswapper.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceSwapper.ai</a></li>
-                <li><a href="https://fal.ai/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">fal.ai</a></li>
-                <li><a href="https://www.figma.com/legal/tos/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Figma AI</a></li>
-                <li><a href="https://www.flexclip.com/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FlexClip AI</a></li>
-                <li><a href="https://fliki.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fliki</a></li>
-                <li><a href="https://blackforestlabs.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FLUX (Black Forest Labs)</a></li>
-                <li><a href="https://github.com/lllyasviel/Fooocus/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fooocus</a></li>
-                <li><a href="https://www.fotor.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fotor AI</a></li>
-                <li><a href="https://www.freepik.com/legal/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Freepik AI</a></li>
-                <li><a href="https://www.genmo.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Genmo (Mochi)</a></li>
-                <li><a href="https://getimg.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">getimg.ai</a></li>
-                <li><a href="https://www.gettyimages.com/eula" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Getty Images Generative AI</a></li>
-                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Imagen / Gemini Image (Nano Banana)</a></li>
-                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Veo 3 / Veo 3.1</a></li>
-                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Vids</a></li>
-                <li><a href="https://x.ai/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Grok Imagine / Aurora (xAI)</a></li>
-                <li><a href="https://hailuoai.video/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hailuo AI (MiniMax)</a></li>
-                <li><a href="https://haiper.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Haiper AI</a></li>
-                <li><a href="https://www.hedra.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hedra</a></li>
-                <li><a href="https://www.hedra.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hedra (avatars + voix)</a></li>
-                <li><a href="https://www.heygen.com/policy?content=terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">HeyGen</a></li>
-                <li><a href="https://higgsfield.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Higgsfield AI</a></li>
-                <li><a href="https://higgsfield.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Higgsfield Face Swap</a></li>
-                <li><a href="https://hourone.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hour One</a></li>
                 <li><a href="https://huggingface.co/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hugging Face Inference API</a></li>
-                <li><a href="https://icons8.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Icons8 Face Swapper</a></li>
-                <li><a href="https://about.ideogram.ai/legal/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Ideogram</a></li>
-                <li><a href="https://github.com/deepinsight/insightface/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InsightFace / inswapper</a></li>
-                <li><a href="https://invideo.io/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InVideo AI</a></li>
-                <li><a href="https://www.invoke.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InvokeAI</a></li>
-                <li><a href="https://kaiber.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Kaiber</a></li>
-                <li><a href="https://klap.app/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Klap</a></li>
-                <li><a href="https://app.klingai.com/global/user-agreement-en" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Kling AI (Kuaishou)</a></li>
-                <li><a href="https://www.krea.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Krea AI</a></li>
-                <li><a href="https://www.krea.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Krea Video</a></li>
-                <li><a href="https://leonardo.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Leonardo.AI</a></li>
-                <li><a href="https://lexica.art/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Lexica</a></li>
+                <li><a href="https://civitai.com/content/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Civitai</a></li>
                 <li><a href="https://www.lightricks.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Lightricks LTX Video</a></li>
-                <li><a href="https://logome.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Logome AI</a></li>
+                <li><a href="https://playground.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Playground AI</a></li>
+                <li><a href="https://getimg.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">getimg.ai</a></li>
+                <li><a href="https://runwayml.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Runway (Gen-4 / Gen-4.5)</a></li>
+                <li><a href="https://www.adobe.com/legal/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Adobe Firefly</a></li>
+                <li><a href="https://www.vidwud.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidwud</a></li>
+                <li><a href="https://pollinations.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pollinations.AI</a></li>
+                <li><a href="https://vectorize.io/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vectorize.io</a></li>
+                <li><a href="https://www.topazlabs.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Topaz Labs</a></li>
+                <li><a href="https://pixverse.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">PixVerse Face Swap</a></li>
+                <li><a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Sora / Sora 2 (OpenAI)</a></li>
+                <li><a href="https://domoai.app/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Domo AI</a></li>
+                <li><a href="https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ComfyUI</a></li>
+                <li><a href="https://about.ideogram.ai/legal/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Ideogram</a></li>
+                <li><a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DALL·E 3 / GPT Image (ChatGPT Images)</a></li>
+                <li><a href="https://www.miocreate.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">MioCreate</a></li>
+                <li><a href="https://www.veed.io/legal/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Veed.io</a></li>
+                <li><a href="https://www.facemagic.ai/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceMagic</a></li>
+                <li><a href="https://www.opus.pro/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Opus Clip</a></li>
+                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Veo 3 / Veo 3.1</a></li>
+                <li><a href="https://faceswapper.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceSwapper.ai</a></li>
+                <li><a href="https://www.descript.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Descript</a></li>
+                <li><a href="https://www.tavus.io/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tavus</a></li>
+                <li><a href="https://www.gettyimages.com/eula" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Getty Images Generative AI</a></li>
+                <li><a href="https://www.wombo.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Dream by WOMBO</a></li>
+                <li><a href="https://www.swapped.io/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Swapped.io</a></li>
+                <li><a href="https://leonardo.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Leonardo.AI</a></li>
+                <li><a href="https://pixlr.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pixlr AI</a></li>
+                <li><a href="https://haiper.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Haiper AI</a></li>
+                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Imagen / Gemini Image (Nano Banana)</a></li>
+                <li><a href="https://www.synthesia.io/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Synthesia</a></li>
+                <li><a href="https://snap.com/en-US/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Snap Camera / Snapchat Lenses</a></li>
+                <li><a href="https://www.adobe.com/legal/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Adobe Firefly Video / Premiere Generative Extend</a></li>
+                <li><a href="https://vivideo.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vivideo</a></li>
+                <li><a href="https://tensor.art/template/954258687793556247" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tensor.Art</a></li>
+                <li><a href="https://github.com/deepinsight/insightface/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InsightFace / inswapper</a></li>
+                <li><a href="https://www.capcut.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">CapCut AI</a></li>
+                <li><a href="https://www.steve.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Steve.ai</a></li>
+                <li><a href="https://higgsfield.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Higgsfield AI</a></li>
+                <li><a href="https://remaker.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Remaker AI</a></li>
+                <li><a href="https://higgsfield.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Higgsfield Face Swap</a></li>
                 <li><a href="https://looka.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Looka</a></li>
+                <li><a href="https://www.krea.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Krea AI</a></li>
+                <li><a href="https://stability.ai/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Stable Diffusion / Stability AI</a></li>
+                <li><a href="https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Midjourney</a></li>
+                <li><a href="https://invideo.io/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InVideo AI</a></li>
+                <li><a href="https://elevenlabs.io/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ElevenLabs</a></li>
+                <li><a href="https://www.mage.space/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Mage.space</a></li>
+                <li><a href="https://fal.ai/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">fal.ai</a></li>
+                <li><a href="https://github.com/deepfakes/faceswap/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Faceswap (faceswap.dev)</a></li>
+                <li><a href="https://akool.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Akool</a></li>
+                <li><a href="https://www.figma.com/legal/tos/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Figma AI</a></li>
+                <li><a href="https://pixverse.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">PixVerse</a></li>
+                <li><a href="https://github.com/upscayl/upscayl/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Upscayl</a></li>
+                <li><a href="https://www.photoroom.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Photoroom</a></li>
+                <li><a href="https://www.colossyan.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Colossyan</a></li>
+                <li><a href="https://www.flexclip.com/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FlexClip AI</a></li>
+                <li><a href="https://vidyo.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidyo.ai</a></li>
+                <li><a href="https://www.pica-ai.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pica AI</a></li>
+                <li><a href="https://www.freepik.com/legal/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Freepik AI</a></li>
+                <li><a href="https://github.com/s0md3v/roop/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Roop</a></li>
+                <li><a href="https://magichour.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magic Hour</a></li>
+                <li><a href="https://replicate.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Replicate</a></li>
+                <li><a href="https://www.vidu.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidu</a></li>
+                <li><a href="https://www.microsoft.com/en-us/servicesagreement/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Microsoft Designer / Copilot Image Creator</a></li>
+                <li><a href="https://picsart.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Picsart AI</a></li>
+                <li><a href="https://github.com/neuralchen/SimSwap/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">SimSwap</a></li>
+                <li><a href="https://www.microsoft.com/en-us/servicesagreement/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Microsoft Clipchamp AI</a></li>
+                <li><a href="https://swapface.org/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Swapface</a></li>
+                <li><a href="https://deepswapper.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepSwapper</a></li>
+                <li><a href="https://www.moonvalley.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Moonvalley (Marey)</a></li>
+                <li><a href="https://www.vidnoz.com/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidnoz Face Swap</a></li>
+                <li><a href="https://www.aistudios.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepBrain AI / AI Studios</a></li>
+                <li><a href="https://www.krea.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Krea Video</a></li>
+                <li><a href="https://www.fotor.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fotor AI</a></li>
                 <li><a href="https://lumalabs.ai/legal/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Luma Dream Machine / Ray3</a></li>
                 <li><a href="https://lumen5.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Lumen5</a></li>
-                <li><a href="https://www.mage.space/tos" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Mage.space</a></li>
-                <li><a href="https://magichour.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magic Hour</a></li>
-                <li><a href="https://magichour.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magic Hour (Cling Cling)</a></li>
-                <li><a href="https://magnific.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magnific AI</a></li>
-                <li><a href="https://www.microsoft.com/en-us/servicesagreement/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Microsoft Clipchamp AI</a></li>
-                <li><a href="https://www.microsoft.com/en-us/servicesagreement/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Microsoft Designer / Copilot Image Creator</a></li>
-                <li><a href="https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Midjourney</a></li>
-                <li><a href="https://www.miocreate.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">MioCreate</a></li>
-                <li><a href="https://modal.com/legal/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Modal</a></li>
-                <li><a href="https://www.moonvalley.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Moonvalley (Marey)</a></li>
-                <li><a href="https://creator.nightcafe.studio/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">NightCafe</a></li>
-                <li><a href="https://www.opus.pro/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Opus Clip</a></li>
-                <li><a href="https://www.photoroom.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Photoroom</a></li>
-                <li><a href="https://www.pica-ai.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pica AI</a></li>
-                <li><a href="https://picsart.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Picsart AI</a></li>
-                <li><a href="https://pictory.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pictory</a></li>
-                <li><a href="https://pika.art/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pika</a></li>
-                <li><a href="https://pixlr.com/terms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pixlr AI</a></li>
-                <li><a href="https://pixverse.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">PixVerse</a></li>
-                <li><a href="https://pixverse.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">PixVerse Face Swap</a></li>
-                <li><a href="https://playground.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Playground AI</a></li>
-                <li><a href="https://pollinations.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pollinations.AI</a></li>
-                <li><a href="https://www.recraft.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Recraft</a></li>
-                <li><a href="https://reface.ai/legal-info/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Reface</a></li>
-                <li><a href="https://remaker.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Remaker AI</a></li>
-                <li><a href="https://replicate.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Replicate</a></li>
-                <li><a href="https://github.com/s0md3v/roop/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Roop</a></li>
-                <li><a href="https://github.com/Hillobar/Rope/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Rope</a></li>
-                <li><a href="https://www.runpod.io/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">RunPod</a></li>
-                <li><a href="https://runwayml.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Runway (Gen-4 / Gen-4.5)</a></li>
-                <li><a href="https://www.volcengine.com/docs/82379/1099455" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Seedance (ByteDance)</a></li>
-                <li><a href="https://www.segmind.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Segmind</a></li>
-                <li><a href="https://www.shutterstock.com/license" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Shutterstock AI</a></li>
-                <li><a href="https://github.com/neuralchen/SimSwap/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">SimSwap</a></li>
-                <li><a href="https://snap.com/en-US/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Snap Camera / Snapchat Lenses</a></li>
-                <li><a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Sora / Sora 2 (OpenAI)</a></li>
-                <li><a href="https://stability.ai/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Stable Diffusion / Stability AI</a></li>
-                <li><a href="https://www.steve.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Steve.ai</a></li>
-                <li><a href="https://www.submagic.co/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Submagic</a></li>
-                <li><a href="https://swapface.org/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Swapface</a></li>
-                <li><a href="https://www.swapped.io/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Swapped.io</a></li>
-                <li><a href="https://www.synthesia.io/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Synthesia</a></li>
-                <li><a href="https://www.tavus.io/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tavus</a></li>
-                <li><a href="https://tensor.art/template/954258687793556247" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tensor.Art</a></li>
-                <li><a href="https://www.together.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Together AI</a></li>
-                <li><a href="https://www.topazlabs.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Topaz Labs</a></li>
-                <li><a href="https://github.com/upscayl/upscayl/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Upscayl</a></li>
-                <li><a href="https://vectorize.io/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vectorize.io</a></li>
-                <li><a href="https://vectorizer.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vectorizer.AI</a></li>
-                <li><a href="https://www.veed.io/legal/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Veed.io</a></li>
-                <li><a href="https://www.vidnoz.com/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidnoz Face Swap</a></li>
-                <li><a href="https://www.vidu.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidu</a></li>
-                <li><a href="https://www.vidwud.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidwud</a></li>
-                <li><a href="https://vidyo.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vidyo.ai</a></li>
-                <li><a href="https://viggle.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Viggle AI</a></li>
-                <li><a href="https://vivago.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vivago</a></li>
-                <li><a href="https://vivideo.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vivideo</a></li>
+                <li><a href="https://www.faceplay.cc/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FacePlay</a></li>
                 <li><a href="https://www.vozo.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vozo / RecCloud</a></li>
-                <li><a href="https://github.com/Wan-Video/Wan2.1/blob/main/LICENSE.txt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Wan (Alibaba, open source)</a></li>
+                <li><a href="https://www.banuba.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Banuba SDK</a></li>
+                <li><a href="https://pictory.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pictory</a></li>
+                <li><a href="https://www.captions.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Captions</a></li>
+                <li><a href="https://www.invoke.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">InvokeAI</a></li>
+                <li><a href="https://www.hedra.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hedra (avatars + voix)</a></li>
+                <li><a href="https://www.arcads.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Arcads.ai</a></li>
+                <li><a href="https://elai.io/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Elai.io</a></li>
+                <li><a href="https://www.together.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Together AI</a></li>
+                <li><a href="https://blackforestlabs.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FLUX (Black Forest Labs)</a></li>
+                <li><a href="https://github.com/lllyasviel/Fooocus/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fooocus</a></li>
+                <li><a href="https://bestphoto.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">BestPhotoAI</a></li>
+                <li><a href="https://www.genmo.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Genmo (Mochi)</a></li>
+                <li><a href="https://www.basedlabs.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">BasedLabs AI Face Swap</a></li>
+                <li><a href="https://www.canva.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Canva (Magic Studio / Magic Media)</a></li>
+                <li><a href="https://reface.ai/legal-info/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Reface</a></li>
+                <li><a href="https://www.runpod.io/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">RunPod</a></li>
+                <li><a href="https://deepfakesweb.com/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Deepfakes Web</a></li>
+                <li><a href="https://www.craiyon.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Craiyon</a></li>
+                <li><a href="https://www.shutterstock.com/license" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Shutterstock AI</a></li>
+                <li><a href="https://fliki.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Fliki</a></li>
+                <li><a href="https://x.ai/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Grok Imagine / Aurora (xAI)</a></li>
+                <li><a href="https://www.submagic.co/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Submagic</a></li>
+                <li><a href="https://www.d-id.com/terms-of-use/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">D-ID</a></li>
+                <li><a href="https://www.segmind.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Segmind</a></li>
+                <li><a href="https://pika.art/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Pika</a></li>
+                <li><a href="https://www.adcreative.ai/terms-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AdCreative.ai</a></li>
+                <li><a href="https://www.volcengine.com/docs/82379/1099455" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Seedance (ByteDance)</a></li>
+                <li><a href="https://www.recraft.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Recraft</a></li>
+                <li><a href="https://viggle.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Viggle AI</a></li>
+                <li><a href="https://lexica.art/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Lexica</a></li>
+                <li><a href="https://vivago.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Vivago</a></li>
                 <li><a href="https://zao.momocdn.com/zao-h5/term.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Zao</a></li>
+                <li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Google Vids</a></li>
+                <li><a href="https://kaiber.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Kaiber</a></li>
+                <li><a href="https://modal.com/legal/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Modal</a></li>
+                <li><a href="https://magichour.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Magic Hour (Cling Cling)</a></li>
+                <li><a href="https://creator.nightcafe.studio/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">NightCafe</a></li>
+                <li><a href="https://github.com/iperov/DeepFaceLab/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepFaceLab</a></li>
+                <li><a href="https://app.klingai.com/global/user-agreement-en" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Kling AI (Kuaishou)</a></li>
+                <li><a href="https://aiease.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Aiease (PicWish)</a></li>
+                <li><a href="https://logome.ai/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Logome AI</a></li>
+                <li><a href="https://icons8.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Icons8 Face Swapper</a></li>
+                <li><a href="https://www.heygen.com/policy?content=terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">HeyGen</a></li>
+                <li><a href="https://hailuoai.video/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hailuo AI (MiniMax)</a></li>
+                <li><a href="https://deepai.org/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepAI</a></li>
+                <li><a href="https://www.artbreeder.com/terms.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Artbreeder</a></li>
+                <li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/master/LICENSE.txt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">AUTOMATIC1111 (Stable Diffusion WebUI)</a></li>
+                <li><a href="https://github.com/Hillobar/Rope/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Rope</a></li>
+                <li><a href="https://github.com/hacksider/Deep-Live-Cam/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Deep-Live-Cam</a></li>
+                <li><a href="https://github.com/iperov/DeepFaceLive/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepFaceLive</a></li>
+                <li><a href="https://github.com/facefusion/facefusion/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">FaceFusion</a></li>
+                <li><a href="https://www.hedra.com/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hedra</a></li>
+                <li><a href="https://hourone.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Hour One</a></li>
+                <li><a href="https://klap.app/terms" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Klap</a></li>
+                <li><a href="https://www.argil.ai/legal-mentions" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Argil</a></li>
+                <li><a href="https://www.deepswap.ai/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DeepSwap</a></li>
               </ul>
             )}
 
