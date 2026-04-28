@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import MasterclassVideoIA from './pages/MasterclassVideoIA';
 import InscriptionMireille from './pages/InscriptionMireille';
+import CGU from './pages/CGU';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/masterclass-video-ia" element={<MasterclassVideoIA />} />
         <Route path="/inscription-mireille" element={<InscriptionMireille />} />
+        <Route path="/cgu" element={<CGU />} />
       </Routes>
     </BrowserRouter>
   );
