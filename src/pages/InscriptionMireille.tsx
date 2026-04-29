@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const COUNTRIES = [
   'France', 'Belgique', 'Suisse', 'Luxembourg',
@@ -229,15 +230,151 @@ export default function InscriptionMireille() {
       <main className="flex-1 flex items-center justify-center relative z-10 px-6 py-8 md:py-12">
         <div className="w-full max-w-[600px] mx-auto">
 
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-heading font-light mb-3 leading-tight tracking-tight">
-              Inscrivez-vous à{' '}
-              <span className="gold-gradient-text italic">Mireille</span>
+          {/* ── H1 ── */}
+          <div className="text-center mb-6">
+            <h1
+              className="font-heading leading-tight"
+              style={{ fontSize: 'clamp(26px, 5vw, 32px)', fontWeight: 500, lineHeight: 1.3 }}
+            >
+              Recevez votre vidéo IA gratuite<br />
+              <span className="gold-gradient-text italic">en 15 minutes</span>
             </h1>
-            <p className="text-gray-300 text-base md:text-lg font-light">
-              Inscrivez-vous pour créer vos vidéos IA
-            </p>
           </div>
+
+          {/* ── H2 sous-titre ── */}
+          <p
+            className="text-center mx-auto mb-6 text-white/70"
+            style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560 }}
+          >
+            Envoyez un vocal et une photo sur{' '}
+            <span
+              className="inline-flex items-center align-middle rounded-full"
+              style={{
+                background: 'rgba(37,211,102,0.12)',
+                color: '#25d366',
+                padding: '2px 9px',
+                fontSize: 13,
+                fontWeight: 500,
+                gap: 4,
+              }}
+            >
+              <WhatsAppIcon size={13} color="#25d366" />
+              WhatsApp
+            </span>.<br />
+            Mireille s'occupe de tout : voix, image, mise en scène.<br />
+            Vous recevez une vidéo prête à publier sur tous vos réseaux.
+          </p>
+
+          {/* ── Badge "Première vidéo offerte" ── */}
+          <div className="flex justify-center mb-8">
+            <span
+              className="inline-flex items-center rounded-full"
+              style={{
+                background: 'rgba(194,129,53,0.08)',
+                border: '0.5px solid rgba(194,129,53,0.3)',
+                color: '#C28135',
+                padding: '6px 16px',
+                fontSize: 13,
+                fontWeight: 500,
+                gap: 10,
+              }}
+            >
+              Première vidéo offerte
+              <span style={{ width: 1, height: 14, background: 'rgba(194,129,53,0.3)', display: 'inline-block' }} />
+              <span className="inline-flex items-center" style={{ gap: 4, opacity: 0.7, fontSize: 12 }}>
+                <svg width="14" height="11" viewBox="0 0 24 18">
+                  <rect x="1" y="1" width="22" height="16" rx="2" fill="none" stroke="#C28135" strokeWidth="1.4" />
+                  <line x1="1" y1="6" x2="23" y2="6" stroke="#C28135" strokeWidth="1.4" />
+                  <line x1="3" y1="2.5" x2="21" y2="15.5" stroke="#e24b4a" strokeWidth="1.5" />
+                </svg>
+                sans CB
+              </span>
+            </span>
+          </div>
+
+          {/* ── Vidéo démo placeholder ── */}
+          {/* TODO : remplacer par <video src="..." autoPlay muted loop playsInline /> */}
+          <div
+            className="mx-auto mb-10"
+            style={{
+              maxWidth: 520,
+              aspectRatio: '16/9',
+              background: 'var(--color-surface-light)',
+              border: '1px dashed rgba(194,129,53,0.25)',
+              borderRadius: 14,
+              display: 'flex',
+              flexDirection: 'column' as const,
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 10,
+            }}
+          >
+            <div
+              className="flex items-center justify-center rounded-full"
+              style={{
+                width: 52,
+                height: 52,
+                background: 'rgba(194,129,53,0.15)',
+                border: '1px solid rgba(194,129,53,0.3)',
+              }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#C28135">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <span style={{ color: '#C28135', fontSize: 13, fontWeight: 500 }}>Vidéo démo Mireille</span>
+            <span style={{ color: 'rgba(194,129,53,0.4)', fontSize: 11 }}>(à intégrer plus tard)</span>
+          </div>
+
+          {/* ── Comment ça marche ── */}
+          <div className="mb-10">
+            <p
+              className="text-center mb-4 font-heading"
+              style={{
+                textTransform: 'uppercase' as const,
+                letterSpacing: 2.5,
+                fontSize: 11,
+                color: '#8a7560',
+              }}
+            >
+              Comment ça marche
+            </p>
+            <div className="grid grid-cols-3 gap-2.5" style={{ maxWidth: 520, margin: '0 auto' }}>
+              {[
+                { num: '1', text: 'Inscrivez-vous' },
+                { num: '2', text: 'Vocal sur WhatsApp 🎙️' },
+                { num: '3', text: 'Recevez votre vidéo en 15 min' },
+              ].map((step) => (
+                <div
+                  key={step.num}
+                  className="text-center"
+                  style={{
+                    background: 'var(--color-surface-light)',
+                    borderRadius: 10,
+                    padding: '1rem 0.75rem',
+                  }}
+                >
+                  <div className="font-heading" style={{ fontSize: 22, color: '#C28135', fontWeight: 600, marginBottom: 6 }}>
+                    {step.num}
+                  </div>
+                  <div style={{ fontSize: 12, color: '#f5e8d8', lineHeight: 1.4 }}>{step.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Titre section inscription ── */}
+          <p
+            className="text-center mb-4 font-heading"
+            style={{
+              textTransform: 'uppercase' as const,
+              letterSpacing: 2.5,
+              fontSize: 11,
+              color: '#8a7560',
+            }}
+          >
+            Inscription
+          </p>
 
           <div className="glass-panel rounded-2xl p-6 md:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} noValidate className="space-y-5">
@@ -296,7 +433,24 @@ export default function InscriptionMireille() {
 
               {/* Téléphone */}
               <div>
-                <label className="block text-sm text-white/60 mb-1.5">Téléphone *</label>
+                <label className="flex items-center gap-2 text-sm text-white/60 mb-1.5">
+                  Téléphone *
+                  <span
+                    className="inline-flex items-center rounded-full"
+                    style={{
+                      background: 'rgba(37,211,102,0.12)',
+                      color: '#25d366',
+                      padding: '2px 8px',
+                      borderRadius: 10,
+                      fontSize: 11,
+                      fontWeight: 500,
+                      gap: 4,
+                    }}
+                  >
+                    <WhatsAppIcon size={11} color="#25d366" />
+                    WhatsApp
+                  </span>
+                </label>
                 <input
                   type="tel"
                   value={phone}
@@ -407,21 +561,34 @@ export default function InscriptionMireille() {
               </div>
 
               {/* Submit */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full mt-2 py-4 rounded-xl font-heading font-bold text-black text-base tracking-wide transition-opacity disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                style={{ background: 'linear-gradient(to right, #E8C396, #C28135)' }}
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    Inscription en cours...
-                  </>
-                ) : (
-                  'S\'inscrire'
-                )}
-              </button>
+              <div className="mt-2" style={{ textAlign: 'center' }}>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="font-heading transition-opacity disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center"
+                  style={{
+                    background: '#25d366',
+                    color: '#ffffff',
+                    padding: '13px 26px',
+                    borderRadius: 10,
+                    fontWeight: 500,
+                    fontSize: 15,
+                    gap: 10,
+                  }}
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    <>
+                      <WhatsAppIcon size={18} color="#ffffff" />
+                      Recevoir ma vidéo gratuite
+                    </>
+                  )}
+                </button>
+              </div>
 
               {formError && (
                 <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 text-sm">
