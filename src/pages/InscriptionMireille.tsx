@@ -69,6 +69,25 @@ function formatFileSize(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} Mo`;
 }
 
+function BadgeWhatsApp({ size = 13 }: { size?: number }) {
+  return (
+    <span
+      className="inline-flex items-center align-middle rounded-full"
+      style={{
+        background: 'rgba(37,211,102,0.12)',
+        color: '#25d366',
+        padding: '2px 9px',
+        fontSize: size,
+        fontWeight: 500,
+        gap: 4,
+      }}
+    >
+      <WhatsAppIcon size={size} color="#25d366" />
+      WhatsApp
+    </span>
+  );
+}
+
 export default function InscriptionMireille() {
   const [firstName, setFirstName] = useState('');
   const [name, setName] = useState('');
@@ -234,10 +253,10 @@ export default function InscriptionMireille() {
           <div className="text-center mb-6">
             <h1
               className="font-heading leading-tight"
-              style={{ fontSize: 'clamp(26px, 5vw, 32px)', fontWeight: 500, lineHeight: 1.3 }}
+              style={{ fontSize: 'clamp(22px, 4.5vw, 32px)', fontWeight: 500, lineHeight: 1.3 }}
             >
-              Recevez votre vidéo IA gratuite<br />
-              <span className="gold-gradient-text italic">en 15 minutes</span>
+              Recevez votre vidéo IA gratuite en 15 minutes<br />
+              <span className="gold-gradient-text italic">grâce à votre avatar virtuel</span>
             </h1>
           </div>
 
@@ -247,21 +266,8 @@ export default function InscriptionMireille() {
             style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560 }}
           >
             Envoyez un vocal et une photo sur{' '}
-            <span
-              className="inline-flex items-center align-middle rounded-full"
-              style={{
-                background: 'rgba(37,211,102,0.12)',
-                color: '#25d366',
-                padding: '2px 9px',
-                fontSize: 13,
-                fontWeight: 500,
-                gap: 4,
-              }}
-            >
-              <WhatsAppIcon size={13} color="#25d366" />
-              WhatsApp
-            </span>.<br />
-            Mireille s'occupe de tout : voix, image, mise en scène.<br />
+            <BadgeWhatsApp />.<br />
+            Mireille s'occupe de tout : voix, création de votre avatar, mise en scène.<br />
             Vous recevez une vidéo prête à publier sur tous vos réseaux.
           </p>
 
@@ -341,9 +347,9 @@ export default function InscriptionMireille() {
             </p>
             <div className="grid grid-cols-3 gap-2.5" style={{ maxWidth: 520, margin: '0 auto' }}>
               {[
-                { num: '1', text: 'Inscrivez-vous' },
-                { num: '2', text: 'Vocal sur WhatsApp 🎙️' },
-                { num: '3', text: 'Recevez votre vidéo en 15 min' },
+                { num: '1', node: <>Inscrivez-vous</> },
+                { num: '2', node: <>Vocal sur <BadgeWhatsApp size={12} /></> },
+                { num: '3', node: <>Recevez votre vidéo en 15 min</> },
               ].map((step) => (
                 <div
                   key={step.num}
@@ -357,7 +363,7 @@ export default function InscriptionMireille() {
                   <div className="font-heading" style={{ fontSize: 22, color: '#C28135', fontWeight: 600, marginBottom: 6 }}>
                     {step.num}
                   </div>
-                  <div style={{ fontSize: 12, color: '#f5e8d8', lineHeight: 1.4 }}>{step.text}</div>
+                  <div style={{ fontSize: 12, color: '#f5e8d8', lineHeight: 1.4 }}>{step.node}</div>
                 </div>
               ))}
             </div>
@@ -464,6 +470,42 @@ export default function InscriptionMireille() {
               {/* Photo drag & drop */}
               <div>
                 <label className="block text-sm text-white/60 mb-1.5">Photo plein pied *</label>
+
+                <div
+                  className="grid grid-cols-2 gap-2 mb-3"
+                  style={{ maxWidth: 480 }}
+                >
+                  {[
+                    'Plein pied',
+                    'Visage de face',
+                    'Sans chapeau',
+                    'Sans téléphone à l\'oreille',
+                  ].map((critere) => (
+                    <div
+                      key={critere}
+                      className="flex items-center gap-2"
+                      style={{
+                        background: 'rgba(194,129,53,0.06)',
+                        border: '0.5px solid rgba(194,129,53,0.2)',
+                        borderRadius: 8,
+                        padding: '8px 12px',
+                        fontSize: 13,
+                        color: '#f5e8d8',
+                      }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M5 12l5 5L20 7"
+                          stroke="#C28135"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <span>{critere}</span>
+                    </div>
+                  ))}
+                </div>
 
                 {photo && photoPreview ? (
                   <div className="relative border border-white/10 rounded-xl p-4 bg-surface-light">
