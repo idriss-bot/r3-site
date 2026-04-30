@@ -267,8 +267,8 @@ export default function InscriptionMireille() {
           >
             Envoyez un vocal et une photo sur{' '}
             <BadgeWhatsApp />.<br />
-            Mireille s'occupe de tout : voix, création de votre avatar, mise en scène.<br />
-            Vous recevez une vidéo prête à publier sur tous vos réseaux.
+            <span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> s'occupe de tout : <span style={{ whiteSpace: 'nowrap' }}>voix, création de votre avatar, mise en scène</span>.<br />
+            Vous recevez une vidéo prête à publier <span style={{ whiteSpace: 'nowrap' }}>sur tous vos réseaux</span>.
           </p>
 
           {/* ── Badge "Première vidéo offerte" ── */}
@@ -349,7 +349,7 @@ export default function InscriptionMireille() {
               {[
                 { num: '1', node: <>Inscrivez-vous</> },
                 { num: '2', node: <>Vocal sur <BadgeWhatsApp size={12} /></> },
-                { num: '3', node: <>Recevez votre vidéo en 15 min</> },
+                { num: '3', node: <>Mireille réalise votre vidéo en 15 minutes</> },
               ].map((step) => (
                 <div
                   key={step.num}
@@ -469,6 +469,12 @@ export default function InscriptionMireille() {
 
               {/* Photo drag & drop */}
               <div>
+                <h3
+                  className="font-heading text-white mt-2 mb-3"
+                  style={{ fontSize: 16, fontWeight: 500 }}
+                >
+                  Envoyez-nous une photo de vous
+                </h3>
                 <label className="block text-sm text-white/60 mb-1.5">Consignes à respecter *</label>
 
                 <div
@@ -479,7 +485,7 @@ export default function InscriptionMireille() {
                     { text: 'Plein pied', type: 'positive' },
                     { text: 'Visage de face', type: 'positive' },
                     { text: 'Sans chapeau', type: 'negative' },
-                    { text: 'Sans téléphone à l\'oreille', type: 'negative' },
+                    { text: 'Sans téléphone', type: 'negative' },
                   ].map((critere) => (
                     <div
                       key={critere.text}
