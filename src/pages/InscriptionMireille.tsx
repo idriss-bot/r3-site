@@ -253,7 +253,7 @@ export default function InscriptionMireille() {
           <div className="text-center mb-6">
             <h1
               className="font-heading leading-tight"
-              style={{ fontSize: 'clamp(22px, 4.5vw, 32px)', fontWeight: 500, lineHeight: 1.3 }}
+              style={{ fontSize: 'clamp(22px, 4.5vw, 32px)', fontWeight: 500, lineHeight: 1.3, textWrap: 'balance' } as React.CSSProperties}
             >
               Recevez votre vidéo IA gratuite en 15 minutes<br />
               <span className="gold-gradient-text italic">grâce à votre avatar virtuel</span>
@@ -263,7 +263,7 @@ export default function InscriptionMireille() {
           {/* ── H2 sous-titre ── */}
           <p
             className="text-center mx-auto mb-6 text-white/70"
-            style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560 }}
+            style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560, textWrap: 'balance' } as React.CSSProperties}
           >
             Envoyez un vocal et une photo sur{' '}
             <BadgeWhatsApp />.<br />
@@ -469,20 +469,20 @@ export default function InscriptionMireille() {
 
               {/* Photo drag & drop */}
               <div>
-                <label className="block text-sm text-white/60 mb-1.5">Photo plein pied *</label>
+                <label className="block text-sm text-white/60 mb-1.5">Consignes à respecter *</label>
 
                 <div
                   className="grid grid-cols-2 gap-2 mb-3"
                   style={{ maxWidth: 480 }}
                 >
                   {[
-                    'Plein pied',
-                    'Visage de face',
-                    'Sans chapeau',
-                    'Sans téléphone à l\'oreille',
+                    { text: 'Plein pied', type: 'positive' },
+                    { text: 'Visage de face', type: 'positive' },
+                    { text: 'Sans chapeau', type: 'negative' },
+                    { text: 'Sans téléphone à l\'oreille', type: 'negative' },
                   ].map((critere) => (
                     <div
-                      key={critere}
+                      key={critere.text}
                       className="flex items-center gap-2"
                       style={{
                         background: 'rgba(194,129,53,0.06)',
@@ -493,16 +493,27 @@ export default function InscriptionMireille() {
                         color: '#f5e8d8',
                       }}
                     >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="M5 12l5 5L20 7"
-                          stroke="#C28135"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span>{critere}</span>
+                      {critere.type === 'positive' ? (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M5 12l5 5L20 7"
+                            stroke="#25d366"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      ) : (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M6 6L18 18M18 6L6 18"
+                            stroke="#e24b4a"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      )}
+                      <span>{critere.text}</span>
                     </div>
                   ))}
                 </div>
