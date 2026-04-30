@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -105,6 +105,9 @@ export default function InscriptionMireille() {
   const [success, setSuccess] = useState(false);
   const [formError, setFormError] = useState('');
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const onDrop = useCallback((accepted: File[], rejected: { file: File; errors: { code: string }[] }[]) => {
     setPhotoError('');
@@ -300,38 +303,51 @@ export default function InscriptionMireille() {
             </span>
           </div>
 
-          {/* ── Vidéo démo placeholder ── */}
-          {/* TODO : remplacer par <video src="..." autoPlay muted loop playsInline /> */}
+          {/* ── Vidéo démo ── */}
           <div
-            className="mx-auto mb-10"
+            className="relative mx-auto mb-10 overflow-hidden"
             style={{
-              maxWidth: 520,
-              aspectRatio: '16/9',
-              background: 'var(--color-surface-light)',
-              border: '1px dashed rgba(194,129,53,0.25)',
-              borderRadius: 14,
-              display: 'flex',
-              flexDirection: 'column' as const,
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 10,
+              maxWidth: 280,
+              aspectRatio: '9/16',
+              borderRadius: 20,
+              boxShadow: '0 0 40px rgba(194,129,53,0.3)',
             }}
           >
-            <div
-              className="flex items-center justify-center rounded-full"
-              style={{
-                width: 52,
-                height: 52,
-                background: 'rgba(194,129,53,0.15)',
-                border: '1px solid rgba(194,129,53,0.3)',
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#C28135">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <span style={{ color: '#C28135', fontSize: 13, fontWeight: 500 }}>Vidéo démo Mireille</span>
-            <span style={{ color: 'rgba(194,129,53,0.4)', fontSize: 11 }}>(à intégrer plus tard)</span>
+            <video
+              ref={videoRef}
+              src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1777565768/Mireille_kqzj2t.mp4"
+              preload="metadata"
+              playsInline
+              controls={isPlaying}
+              className="w-full h-full object-cover"
+            />
+            {!isPlaying && (
+              <button
+                type="button"
+                onClick={() => {
+                  videoRef.current?.play();
+                  setIsPlaying(true);
+                }}
+                className="absolute inset-0 flex items-center justify-center"
+                aria-label="Lire la vidéo"
+              >
+                <div
+                  className="flex items-center justify-center rounded-full transition-transform hover:scale-105"
+                  style={{
+                    width: 64,
+                    height: 64,
+                    background: 'rgba(194,129,53,0.85)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1.5px solid rgba(255,255,255,0.2)',
+                    boxShadow: '0 4px 24px rgba(194,129,53,0.4)',
+                  }}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+            )}
           </div>
 
           {/* ── Comment ça marche ── */}
