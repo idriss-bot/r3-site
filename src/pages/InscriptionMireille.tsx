@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
+import Footer from '../components/Footer';
 
 const COUNTRIES = [
   'France', 'Belgique', 'Suisse', 'Luxembourg',
@@ -231,6 +232,7 @@ export default function InscriptionMireille() {
             </p>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -349,7 +351,7 @@ export default function InscriptionMireille() {
               {[
                 { num: '1', node: <>Inscrivez-vous</> },
                 { num: '2', node: <>Vocal sur <BadgeWhatsApp size={12} /></> },
-                { num: '3', node: <>Mireille réalise votre vidéo en 15 minutes</> },
+                { num: '3', node: <><span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> réalise votre vidéo en 15 minutes</> },
               ].map((step) => (
                 <div
                   key={step.num}
@@ -658,6 +660,7 @@ export default function InscriptionMireille() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Star, ChevronDown, ArrowRight, Menu, X } from 'lucide-react';
+import Footer from '../components/Footer';
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) {
   return (
@@ -438,14 +439,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-bg py-16 border-t border-white/5 text-center text-gray-600 font-light text-[10px] uppercase tracking-[0.2em]">
-        <div className="container mx-auto px-6">
-          <img src="/images/logo-r3.png" alt="R3" className="h-12 w-auto mx-auto mb-8" />
-          <p>© {new Date().getFullYear()} R3. <span className="whitespace-nowrap">Tous droits réservés.</span></p>
-          <p className="mt-4"><a href="/mentions-legales/" className="text-gray-400 hover:text-white transition-colors">Mentions légales</a></p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
