@@ -307,8 +307,8 @@ export default function InscriptionMireille() {
           <div
             className="relative mx-auto mb-10 overflow-hidden"
             style={{
-              maxWidth: 280,
-              aspectRatio: '9/16',
+              maxWidth: 560,
+              aspectRatio: '16/9',
               borderRadius: 20,
               boxShadow: '0 0 40px rgba(194,129,53,0.3)',
             }}
