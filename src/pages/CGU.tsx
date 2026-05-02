@@ -20,7 +20,7 @@ export default function CGU() {
             Offre Découverte &mdash; Vidéo gratuite via Mireille
           </p>
           <p className="font-heading text-sm text-gray-500 mt-2 italic">
-            Dernière mise à jour : 28 avril 2026
+            Dernière mise à jour : 2 mai 2026
           </p>
         </div>
 
@@ -30,16 +30,17 @@ export default function CGU() {
           <ol className="font-heading text-base text-gray-300 space-y-2 list-decimal list-inside">
             <li><a href="#article-1"  className="hover:text-primary transition-colors">Objet</a></li>
             <li><a href="#article-2"  className="hover:text-primary transition-colors">Description du Service</a></li>
-            <li><a href="#article-3"  className="hover:text-primary transition-colors">Inscription et déroulement</a></li>
-            <li><a href="#article-4"  className="hover:text-primary transition-colors">Obligations et garanties de l&rsquo;Utilisateur</a></li>
-            <li><a href="#article-5"  className="hover:text-primary transition-colors">Propriété intellectuelle et licences</a></li>
-            <li><a href="#article-6"  className="hover:text-primary transition-colors">Technologie d&rsquo;intelligence artificielle et outils tiers</a></li>
-            <li><a href="#article-7"  className="hover:text-primary transition-colors">Responsabilité</a></li>
-            <li><a href="#article-8"  className="hover:text-primary transition-colors">Suspension et exclusion</a></li>
-            <li><a href="#article-9"  className="hover:text-primary transition-colors">Protection des données personnelles</a></li>
-            <li><a href="#article-10" className="hover:text-primary transition-colors">Modification des CGU</a></li>
-            <li><a href="#article-11" className="hover:text-primary transition-colors">Dispositions diverses</a></li>
-            <li><a href="#article-12" className="hover:text-primary transition-colors">Droit applicable et litiges</a></li>
+            <li><a href="#article-3"  className="hover:text-primary transition-colors">Public concerné et capacité juridique</a></li>
+            <li><a href="#article-4"  className="hover:text-primary transition-colors">Inscription et déroulement</a></li>
+            <li><a href="#article-5"  className="hover:text-primary transition-colors">Obligations et garanties de l&rsquo;Utilisateur</a></li>
+            <li><a href="#article-6"  className="hover:text-primary transition-colors">Propriété intellectuelle et licences</a></li>
+            <li><a href="#article-7"  className="hover:text-primary transition-colors">Technologie d&rsquo;intelligence artificielle et outils tiers</a></li>
+            <li><a href="#article-8"  className="hover:text-primary transition-colors">Responsabilité</a></li>
+            <li><a href="#article-9"  className="hover:text-primary transition-colors">Suspension et exclusion</a></li>
+            <li><a href="#article-10" className="hover:text-primary transition-colors">Protection des données personnelles</a></li>
+            <li><a href="#article-11" className="hover:text-primary transition-colors">Modification des CGU</a></li>
+            <li><a href="#article-12" className="hover:text-primary transition-colors">Dispositions diverses</a></li>
+            <li><a href="#article-13" className="hover:text-primary transition-colors">Droit applicable et litiges</a></li>
           </ol>
         </nav>
 
@@ -53,7 +54,7 @@ export default function CGU() {
               Les présentes Conditions Générales d&rsquo;Utilisation (ci-après les &laquo;&nbsp;CGU&nbsp;&raquo;) ont pour objet de définir les modalités et conditions d&rsquo;utilisation de l&rsquo;offre découverte gratuite proposée par R3, société par actions simplifiée unipersonnelle au capital de 500 euros, dont le siège social est situé au 10 rue de Penthièvre &mdash; 75008 Paris, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 919&nbsp;572&nbsp;339 (ci-après dénommée &laquo;&nbsp;R3&nbsp;&raquo; ou la &laquo;&nbsp;Société&nbsp;&raquo;).
             </p>
             <p>
-              L&rsquo;offre découverte consiste en la mise à disposition gratuite, à toute personne en faisant la demande (ci-après l&rsquo;&laquo;&nbsp;Utilisateur&nbsp;&raquo;), d&rsquo;une (1) vidéo personnalisée générée par intelligence artificielle, intégrant un avatar virtuel reproduisant l&rsquo;image et la voix de l&rsquo;Utilisateur (ci-après la &laquo;&nbsp;Vidéo Découverte&nbsp;&raquo;).
+              L&rsquo;offre découverte consiste en la mise à disposition gratuite, à tout professionnel ou représentant d&rsquo;une personne morale en faisant la demande (ci-après l&rsquo;&laquo;&nbsp;Utilisateur&nbsp;&raquo;), d&rsquo;une (1) vidéo personnalisée générée par intelligence artificielle, intégrant un avatar virtuel reproduisant l&rsquo;image et la voix de l&rsquo;Utilisateur (ci-après la &laquo;&nbsp;Vidéo Découverte&nbsp;&raquo;).
             </p>
             <p>L&rsquo;offre est accessible via :</p>
             <ul className="list-disc list-inside ml-4 space-y-2">
@@ -82,7 +83,7 @@ export default function CGU() {
               La Vidéo Découverte est strictement limitée à une seule vidéo par Utilisateur. Toute demande supplémentaire devra faire l&rsquo;objet d&rsquo;une commande payante régie par les CGV de R3.
             </p>
             <p>
-              Le Service est ouvert à tout public, professionnel comme particulier, sans condition de qualité, d&rsquo;âge minimum (sous réserve de la majorité légale) ou de secteur d&rsquo;activité.
+              Le Service est exclusivement réservé aux professionnels et personnes morales, sans condition de secteur d&rsquo;activité.
             </p>
             <p>
               R3 se réserve le droit de modifier, suspendre ou interrompre l&rsquo;offre découverte à tout moment, sans préavis et sans que sa responsabilité ne puisse être engagée à ce titre.
@@ -93,7 +94,37 @@ export default function CGU() {
         {/* ── Article 3 ── */}
         <section id="article-3" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 3 &mdash; Inscription et déroulement
+            Article 3 &mdash; Public concerné et capacité juridique
+          </h2>
+          <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
+            <p>
+              Le service Mireille est exclusivement réservé aux personnes physiques majeures (18 ans révolus) ou aux personnes morales représentées par un majeur capable.
+            </p>
+            <p>En vous inscrivant, vous attestez sur l&rsquo;honneur :</p>
+            <ul className="list-disc list-inside ml-4 space-y-2">
+              <li>être âgé(e) d&rsquo;au moins 18 ans&nbsp;;</li>
+              <li>disposer de la capacité juridique pour contracter&nbsp;;</li>
+              <li>si vous agissez au nom d&rsquo;une personne morale, disposer du pouvoir de l&rsquo;engager.</li>
+            </ul>
+            <p>
+              L&rsquo;utilisation du service implique le traitement de données biométriques (image et voix). Conformément au Règlement Général sur la Protection des Données (RGPD), le service ne peut en aucun cas être utilisé par un mineur, y compris avec autorisation parentale.
+            </p>
+            <p>R3 se réserve le droit de :</p>
+            <ul className="list-disc list-inside ml-4 space-y-2">
+              <li>refuser, suspendre ou supprimer sans préavis tout compte dont l&rsquo;utilisateur s&rsquo;avérerait mineur&nbsp;;</li>
+              <li>supprimer immédiatement toutes les données associées (photos, enregistrements vocaux, vidéos générées)&nbsp;;</li>
+              <li>ne procéder à aucun remboursement des sommes éventuellement versées dans ce cadre.</li>
+            </ul>
+            <p>
+              Il est strictement interdit d&rsquo;utiliser le service avec la photographie ou la voix d&rsquo;une personne mineure, même avec l&rsquo;accord du représentant légal.
+            </p>
+          </div>
+        </section>
+
+        {/* ── Article 4 ── */}
+        <section id="article-4" className="mb-16 scroll-mt-24">
+          <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
+            Article 4 &mdash; Inscription et déroulement
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>Pour bénéficier du Service, l&rsquo;Utilisateur doit :</p>
@@ -111,15 +142,15 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 4 ── */}
-        <section id="article-4" className="mb-16 scroll-mt-24">
+        {/* ── Article 5 ── */}
+        <section id="article-5" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 4 &mdash; Obligations et garanties de l&rsquo;Utilisateur
+            Article 5 &mdash; Obligations et garanties de l&rsquo;Utilisateur
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              4.1 Garantie sur les contenus transmis
+              5.1 Garantie sur les contenus transmis
             </h3>
             <p>L&rsquo;Utilisateur s&rsquo;engage à ne transmettre à R3 que des photos, vidéos et audios :</p>
             <ul className="list-disc list-inside ml-4 space-y-2">
@@ -137,7 +168,7 @@ export default function CGU() {
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              4.2 Comportement de l&rsquo;Utilisateur
+              5.2 Comportement de l&rsquo;Utilisateur
             </h3>
             <p>L&rsquo;Utilisateur s&rsquo;engage à utiliser le Service de manière loyale et conforme à sa destination. Il s&rsquo;interdit notamment :</p>
             <ul className="list-disc list-inside ml-4 space-y-2">
@@ -151,15 +182,15 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 5 ── */}
-        <section id="article-5" className="mb-16 scroll-mt-24">
+        {/* ── Article 6 ── */}
+        <section id="article-6" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 5 &mdash; Propriété intellectuelle et licences
+            Article 6 &mdash; Propriété intellectuelle et licences
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              5.1 Sur les contenus transmis par l&rsquo;Utilisateur
+              6.1 Sur les contenus transmis par l&rsquo;Utilisateur
             </h3>
             <p>
               En adressant les photos, vidéos et audios à R3 (ci-après les &laquo;&nbsp;Contenus Remis&nbsp;&raquo;), l&rsquo;Utilisateur concède à R3 une licence gratuite, non exclusive et mondiale d&rsquo;exploitation des Contenus Remis, dans les conditions visées ci-dessous.
@@ -173,11 +204,11 @@ export default function CGU() {
               <li>le droit d&rsquo;autoriser des prestataires tiers (notamment des fournisseurs de services d&rsquo;IA et de génération d&rsquo;avatars) à traiter les Contenus Remis pour le compte de R3.</li>
             </ul>
             <p>
-              La licence est consentie pour la durée nécessaire à la réalisation et à la délivrance de la Vidéo Découverte, ainsi que, le cas échéant, pour les usages promotionnels visés à l&rsquo;article 5.3 ci-dessous.
+              La licence est consentie pour la durée nécessaire à la réalisation et à la délivrance de la Vidéo Découverte, ainsi que, le cas échéant, pour les usages promotionnels visés à l&rsquo;article 6.3 ci-dessous.
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              5.2 Sur la Vidéo Découverte
+              6.2 Sur la Vidéo Découverte
             </h3>
             <p>
               La Vidéo Découverte, ainsi que tous les éléments qui la composent (avatar virtuel, voix synthétique, textes, musiques, graphismes, etc.), ainsi que tous les droits de propriété intellectuelle qui y sont associés, sont et demeurent la propriété exclusive de R3.
@@ -190,7 +221,7 @@ export default function CGU() {
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              5.3 Utilisation promotionnelle par R3
+              6.3 Utilisation promotionnelle par R3
             </h3>
             <p>
               L&rsquo;Utilisateur <strong>autorise expressément R3</strong>, à titre gratuit, non exclusif et pour le monde entier, à utiliser, reproduire, diffuser et adapter la Vidéo Découverte (en ce inclus son image et sa voix telles que reproduites par l&rsquo;avatar virtuel) ainsi que son nom et/ou son prénom, à des fins de promotion, de communication, de démonstration et de témoignage commercial du Service et plus largement des services proposés par R3, sur tous supports (sites internet, réseaux sociaux, supports publicitaires, démonstrations commerciales, etc.) et pour une durée de cinq (5) ans à compter de la délivrance de la Vidéo Découverte.
@@ -204,15 +235,15 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 6 ── */}
-        <section id="article-6" className="mb-16 scroll-mt-24">
+        {/* ── Article 7 ── */}
+        <section id="article-7" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 6 &mdash; Technologie d&rsquo;intelligence artificielle et outils tiers
+            Article 7 &mdash; Technologie d&rsquo;intelligence artificielle et outils tiers
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              6.1 Limites techniques de l&rsquo;IA
+              7.1 Limites techniques de l&rsquo;IA
             </h3>
             <p>L&rsquo;Utilisateur est expressément informé et accepte sans réserve :</p>
             <ul className="list-disc list-inside ml-4 space-y-2">
@@ -223,7 +254,7 @@ export default function CGU() {
             </ul>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              6.2 Outils tiers utilisés dans le cadre du Service
+              7.2 Outils tiers utilisés dans le cadre du Service
             </h3>
             <p>
               Pour délivrer le Service, R3 est susceptible de recourir à un ou plusieurs outils, services et technologies d&rsquo;intelligence artificielle édités par des tiers (ci-après les &laquo;&nbsp;Outils Tiers&nbsp;&raquo;), notamment pour la génération d&rsquo;images, de vidéos, de voix synthétiques, d&rsquo;avatars virtuels et pour le traitement et l&rsquo;amélioration des Contenus Remis.
@@ -399,10 +430,10 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 7 ── */}
-        <section id="article-7" className="mb-16 scroll-mt-24">
+        {/* ── Article 8 ── */}
+        <section id="article-8" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 7 &mdash; Responsabilité
+            Article 8 &mdash; Responsabilité
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>Le Service étant fourni à titre entièrement gratuit, dans le cadre d&rsquo;une offre découverte, il est expressément stipulé que :</p>
@@ -420,10 +451,10 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 8 ── */}
-        <section id="article-8" className="mb-16 scroll-mt-24">
+        {/* ── Article 9 ── */}
+        <section id="article-9" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 8 &mdash; Suspension et exclusion
+            Article 9 &mdash; Suspension et exclusion
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>R3 se réserve le droit, à tout moment et sans préavis, de suspendre ou d&rsquo;exclure tout Utilisateur qui contreviendrait aux présentes CGU, et notamment qui :</p>
@@ -439,10 +470,10 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 9 ── */}
-        <section id="article-9" className="mb-16 scroll-mt-24">
+        {/* ── Article 10 ── */}
+        <section id="article-10" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 9 &mdash; Protection des données personnelles
+            Article 10 &mdash; Protection des données personnelles
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>
@@ -450,48 +481,48 @@ export default function CGU() {
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.1 Responsable de traitement
+              10.1 Responsable de traitement
             </h3>
             <p>
               Le responsable de traitement est R3, dont les coordonnées figurent à l&rsquo;article 1 des présentes.
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.2 Données collectées et finalités
+              10.2 Données collectées et finalités
             </h3>
             <p>R3 collecte et traite les données suivantes :</p>
             <ul className="list-disc list-inside ml-4 space-y-2">
               <li>données d&rsquo;identification (nom, prénom, e-mail, numéro de téléphone WhatsApp)&nbsp;: pour la gestion de l&rsquo;inscription et la délivrance de la Vidéo Découverte&nbsp;;</li>
-              <li>photo, vidéo et audio transmis&nbsp;: pour la création de l&rsquo;avatar virtuel et de la Vidéo Découverte, ainsi que, le cas échéant, pour les usages promotionnels visés à l&rsquo;article 5.3&nbsp;;</li>
+              <li>photo, vidéo et audio transmis&nbsp;: pour la création de l&rsquo;avatar virtuel et de la Vidéo Découverte, ainsi que, le cas échéant, pour les usages promotionnels visés à l&rsquo;article 6.3&nbsp;;</li>
               <li>données de contact et historique des échanges&nbsp;: pour la gestion de la relation, la prospection commerciale et l&rsquo;éventuelle conversion vers une offre payante.</li>
             </ul>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.3 Bases légales
+              10.3 Bases légales
             </h3>
             <p>
               Les traitements reposent sur l&rsquo;exécution des présentes CGU (article 6.1.b RGPD), le consentement de l&rsquo;Utilisateur (article 6.1.a RGPD, notamment pour les usages promotionnels et la prospection) et l&rsquo;intérêt légitime de R3 (article 6.1.f RGPD, notamment pour la sécurité et la prévention de la fraude).
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.4 Durées de conservation
+              10.4 Durées de conservation
             </h3>
             <ul className="list-disc list-inside ml-4 space-y-2">
               <li>Les photos, vidéos et audios bruts transmis par l&rsquo;Utilisateur, ainsi que les avatars virtuels associés, sont conservés pendant une durée maximale de trente (30) jours à compter de la délivrance de la Vidéo Découverte, puis supprimés&nbsp;;</li>
-              <li>la Vidéo Découverte elle-même peut être conservée par R3 pendant la durée nécessaire aux usages promotionnels visés à l&rsquo;article 5.3, soit cinq (5) ans maximum&nbsp;;</li>
+              <li>la Vidéo Découverte elle-même peut être conservée par R3 pendant la durée nécessaire aux usages promotionnels visés à l&rsquo;article 6.3, soit cinq (5) ans maximum&nbsp;;</li>
               <li>les données de contact à des fins de prospection commerciale sont conservées pendant trois (3) ans à compter du dernier contact avec l&rsquo;Utilisateur&nbsp;;</li>
               <li>les données comptables éventuelles sont conservées dix (10) ans conformément aux obligations légales et fiscales applicables.</li>
             </ul>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.5 Destinataires
+              10.5 Destinataires
             </h3>
             <p>
-              Les données sont traitées par R3 et son personnel et peuvent être communiquées à des prestataires tiers agissant en qualité de sous-traitants au sens du RGPD, notamment les éditeurs des Outils Tiers visés à l&rsquo;article 6.2 des présentes, ainsi que les hébergeurs et services de messagerie. Ces sous-traitants sont soumis à des obligations contractuelles de sécurité et de confidentialité au moins équivalentes à celles incombant à R3.
+              Les données sont traitées par R3 et son personnel et peuvent être communiquées à des prestataires tiers agissant en qualité de sous-traitants au sens du RGPD, notamment les éditeurs des Outils Tiers visés à l&rsquo;article 7.2 des présentes, ainsi que les hébergeurs et services de messagerie. Ces sous-traitants sont soumis à des obligations contractuelles de sécurité et de confidentialité au moins équivalentes à celles incombant à R3.
             </p>
 
             <h3 className="font-heading text-xl font-semibold text-white mt-8 mb-4">
-              9.6 Droits de l&rsquo;Utilisateur
+              10.6 Droits de l&rsquo;Utilisateur
             </h3>
             <p>
               L&rsquo;Utilisateur dispose, à tout moment, d&rsquo;un droit d&rsquo;accès, de rectification, d&rsquo;effacement, de limitation, de portabilité, d&rsquo;opposition au traitement de ses données personnelles, ainsi que du droit de retirer son consentement à tout moment et de définir des directives relatives au sort de ses données après son décès.
@@ -507,10 +538,10 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 10 ── */}
-        <section id="article-10" className="mb-16 scroll-mt-24">
+        {/* ── Article 11 ── */}
+        <section id="article-11" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 10 &mdash; Modification des CGU
+            Article 11 &mdash; Modification des CGU
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>
@@ -522,10 +553,10 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 11 ── */}
-        <section id="article-11" className="mb-16 scroll-mt-24">
+        {/* ── Article 12 ── */}
+        <section id="article-12" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 11 &mdash; Dispositions diverses
+            Article 12 &mdash; Dispositions diverses
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>
@@ -537,20 +568,20 @@ export default function CGU() {
           </div>
         </section>
 
-        {/* ── Article 12 ── */}
-        <section id="article-12" className="mb-16 scroll-mt-24">
+        {/* ── Article 13 ── */}
+        <section id="article-13" className="mb-16 scroll-mt-24">
           <h2 className="font-body text-3xl md:text-4xl text-primary mb-6 border-b border-gray-800 pb-3">
-            Article 12 &mdash; Droit applicable et litiges
+            Article 13 &mdash; Droit applicable et litiges
           </h2>
           <div className="font-heading text-base text-gray-300 leading-relaxed space-y-4">
             <p>
               Les présentes CGU sont soumises au droit français.
             </p>
             <p>
-              En cas de litige, les parties s&rsquo;engagent à rechercher une solution amiable avant tout recours contentieux. À défaut d&rsquo;accord amiable dans un délai de trente (30) jours à compter de la première notification du litige, et sous réserve des dispositions impératives de l&rsquo;article R.&nbsp;631-3 du Code de la consommation lorsque l&rsquo;Utilisateur a la qualité de consommateur, les tribunaux du ressort de la Cour d&rsquo;appel de Paris seront seuls compétents.
+              Le service étant exclusivement réservé aux professionnels, l&rsquo;Utilisateur reconnaît agir dans le cadre de son activité professionnelle, à l&rsquo;exclusion de tout statut de consommateur.
             </p>
             <p>
-              Conformément aux articles L.&nbsp;611-1 et suivants du Code de la consommation, l&rsquo;Utilisateur consommateur est informé qu&rsquo;il peut recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l&rsquo;opposerait à R3.
+              En cas de litige, les parties s&rsquo;engagent à rechercher une solution amiable avant tout recours contentieux. À défaut d&rsquo;accord amiable dans un délai de trente (30) jours à compter de la première notification du litige, les tribunaux du ressort de la Cour d&rsquo;appel de Paris seront seuls compétents, y compris en cas de pluralité de défendeurs ou d&rsquo;appel en garantie.
             </p>
           </div>
         </section>

@@ -623,7 +623,7 @@ export default function InscriptionMireille() {
                     className="mt-0.5 accent-primary w-4 h-4 flex-shrink-0"
                   />
                   <span className="text-sm text-white/70 leading-relaxed">
-                    J'accepte les{' '}
+                    Je certifie avoir 18 ans ou plus et j'accepte les{' '}
                     <a
                       href="/cgu"
                       target="_blank"
