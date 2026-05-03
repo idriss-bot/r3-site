@@ -598,6 +598,23 @@ export default function InscriptionMireille() {
                 )}
               </div>
 
+              {/* Encart confidentialité */}
+              <div
+                style={{
+                  background: 'rgba(194,129,53,0.06)',
+                  border: '0.5px solid rgba(194,129,53,0.2)',
+                  borderRadius: 8,
+                  padding: '14px 16px',
+                }}
+              >
+                <p style={{ fontSize: 14, fontWeight: 600, color: '#f5e8d8', marginBottom: 6 }}>
+                  🔒 Vos données vous appartiennent
+                </p>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,232,216,0.6)' }}>
+                  R3 est une SASU française dont le siège social est à Paris et le bureau à Marseille. Vous pouvez demander la suppression de toutes vos données à tout moment, par simple demande par mail.
+                </p>
+              </div>
+
               {/* Confirmation identité */}
               <div>
                 <label className="flex items-start gap-3 cursor-pointer">
