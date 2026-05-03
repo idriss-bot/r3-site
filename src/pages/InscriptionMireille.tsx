@@ -740,11 +740,11 @@ export default function InscriptionMireille() {
             <h3 style={{ fontSize: 18, fontWeight: 600, color: '#f5e8d8', marginBottom: 6 }}>
               🎬 Vérifions ensemble avant d'envoyer
             </h3>
-            <p style={{ fontSize: 14, fontWeight: 500, color: 'rgba(194,129,53,0.8)', marginBottom: 12 }}>
+            <p style={{ fontSize: 18, fontWeight: 600, color: '#f5e8d8', marginBottom: 12 }}>
               L'IA fait de l'IA, mais l'IA ne fait pas de magie.
             </p>
-            <p style={{ fontSize: 13, color: 'rgba(245,232,216,0.6)', lineHeight: 1.6, marginBottom: 16 }}>
-              La qualité de votre vidéo dépend uniquement de la qualité de votre photo. Avez-vous bien respecté les consignes ?
+            <p style={{ fontSize: 14, color: 'rgba(245,232,216,0.85)', lineHeight: 1.6, marginBottom: 16 }}>
+              <strong>La qualité de votre vidéo dépend uniquement de la qualité de votre photo.</strong> Avez-vous bien respecté les consignes ?
             </p>
 
             <div
