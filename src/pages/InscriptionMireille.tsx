@@ -317,7 +317,7 @@ export default function InscriptionMireille() {
                   <line x1="1" y1="6" x2="23" y2="6" stroke="#C28135" strokeWidth="1.4" />
                   <line x1="3" y1="2.5" x2="21" y2="15.5" stroke="#e24b4a" strokeWidth="1.5" />
                 </svg>
-                sans CB
+                Pas de CB requise
               </span>
             </span>
           </div>
