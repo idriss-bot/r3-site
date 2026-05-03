@@ -632,7 +632,7 @@ export default function InscriptionMireille() {
                   🔒 Vos données vous appartiennent
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,232,216,0.6)' }}>
-                  R3 est une société française dont le siège social est à Paris et le bureau à Marseille. Vous pouvez demander la suppression de toutes vos données à tout moment, par simple demande par mail.
+                  Mireille est un service de R3, société française dont le siège social est à Paris et le bureau à Marseille. Vous pouvez demander la suppression de toutes vos données à tout moment, par simple demande par mail.
                 </p>
               </div>
 
