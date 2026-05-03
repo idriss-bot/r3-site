@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -105,6 +105,15 @@ export default function InscriptionMireille() {
   const [success, setSuccess] = useState(false);
   const [formError, setFormError] = useState('');
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+
+  useEffect(() => {
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && showConfirmModal) setShowConfirmModal(false);
+    };
+    document.addEventListener('keydown', onEsc);
+    return () => document.removeEventListener('keydown', onEsc);
+  }, [showConfirmModal]);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -140,7 +149,7 @@ export default function InscriptionMireille() {
     setPhotoError('');
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormError('');
     setFieldErrors({});
@@ -154,9 +163,8 @@ export default function InscriptionMireille() {
     if (!identityConfirmed) errors.identityConfirmed = 'Vous devez confirmer que la personne sur la photo est bien vous-même.';
     if (!cgu) errors.cgu = 'Vous devez accepter les CGU.';
 
-    let normalizedPhone = '';
     try {
-      normalizedPhone = normalizePhone(phone, country);
+      normalizePhone(phone, country);
     } catch (err) {
       errors.phone = err instanceof Error ? err.message : 'Numéro de téléphone invalide.';
     }
@@ -166,8 +174,14 @@ export default function InscriptionMireille() {
       return;
     }
 
+    setShowConfirmModal(true);
+  };
+
+  const handleConfirmSubmit = async () => {
+    setShowConfirmModal(false);
     setLoading(true);
     try {
+      const normalizedPhone = normalizePhone(phone, country);
       const formData = new FormData();
       formData.append('name', name.trim());
       formData.append('first_name', firstName.trim());
@@ -209,6 +223,11 @@ export default function InscriptionMireille() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleChangePhoto = () => {
+    setShowConfirmModal(false);
+    document.getElementById('photo-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   const inputClass = (field: string) =>
@@ -486,7 +505,7 @@ export default function InscriptionMireille() {
               </div>
 
               {/* Photo drag & drop */}
-              <div>
+              <div id="photo-section">
                 <h3
                   className="font-heading text-white mt-2 mb-3"
                   style={{ fontSize: 16, fontWeight: 500 }}
@@ -697,6 +716,127 @@ export default function InscriptionMireille() {
         </div>
       </main>
       <Footer />
+
+      {/* Modal de validation qualité photo */}
+      {showConfirmModal && (
+        <div
+          style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)' }}
+          onClick={() => setShowConfirmModal(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: '#1a1a1a',
+              border: '0.5px solid rgba(194,129,53,0.3)',
+              borderRadius: 16,
+              padding: '28px 24px',
+              maxWidth: 520,
+              width: '100%',
+              margin: '0 16px',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+            }}
+          >
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: '#f5e8d8', marginBottom: 6 }}>
+              🎬 Vérifions ensemble avant d'envoyer
+            </h3>
+            <p style={{ fontSize: 14, fontWeight: 500, color: 'rgba(194,129,53,0.8)', marginBottom: 12 }}>
+              L'IA fait de l'IA, mais l'IA ne fait pas de magie.
+            </p>
+            <p style={{ fontSize: 13, color: 'rgba(245,232,216,0.6)', lineHeight: 1.6, marginBottom: 16 }}>
+              La qualité de votre vidéo dépend uniquement de la qualité de votre photo. Avez-vous bien respecté les consignes ?
+            </p>
+
+            <div
+              className="grid grid-cols-2 gap-2"
+              style={{ marginBottom: 20 }}
+            >
+              {[
+                { text: 'Plein pied', type: 'positive' },
+                { text: 'Visage de face et éclairé', type: 'positive' },
+                { text: 'Photo couleur HD', type: 'positive' },
+                { text: 'Seul sur la photo', type: 'positive' },
+                { text: 'Sans lunettes', type: 'negative' },
+                { text: 'Sans chapeau', type: 'negative' },
+                { text: 'Sans objet dans les mains', type: 'negative' },
+              ].map((critere) => (
+                <div
+                  key={critere.text}
+                  className="flex items-center gap-2"
+                  style={{
+                    background: 'rgba(194,129,53,0.06)',
+                    border: '0.5px solid rgba(194,129,53,0.2)',
+                    borderRadius: 8,
+                    padding: '8px 12px',
+                    fontSize: 13,
+                    color: '#f5e8d8',
+                  }}
+                >
+                  {critere.type === 'positive' ? (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M5 12l5 5L20 7"
+                        stroke="#25d366"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 6L18 18M18 6L6 18"
+                        stroke="#e24b4a"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  )}
+                  <span>{critere.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <button
+                type="button"
+                onClick={handleConfirmSubmit}
+                className="font-heading"
+                style={{
+                  background: '#25d366',
+                  color: '#ffffff',
+                  padding: '13px 24px',
+                  borderRadius: 10,
+                  fontWeight: 500,
+                  fontSize: 15,
+                  border: 'none',
+                  cursor: 'pointer',
+                  width: '100%',
+                }}
+              >
+                ✓ Tout est bon, recevoir ma vidéo
+              </button>
+              <button
+                type="button"
+                onClick={handleChangePhoto}
+                style={{
+                  background: 'transparent',
+                  color: 'rgba(245,232,216,0.6)',
+                  padding: '11px 24px',
+                  borderRadius: 10,
+                  fontWeight: 400,
+                  fontSize: 14,
+                  border: '0.5px solid rgba(245,232,216,0.15)',
+                  cursor: 'pointer',
+                  width: '100%',
+                }}
+              >
+                Changer ma photo
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
