@@ -501,10 +501,12 @@ export default function InscriptionMireille() {
                 >
                   {[
                     { text: 'Plein pied', type: 'positive' },
-                    { text: 'Visage de face', type: 'positive' },
+                    { text: 'Visage de face et éclairé', type: 'positive' },
+                    { text: 'Photo couleur HD', type: 'positive' },
+                    { text: 'Seul sur la photo', type: 'positive' },
                     { text: 'Sans lunettes', type: 'negative' },
                     { text: 'Sans chapeau', type: 'negative' },
-                    { text: 'Sans téléphone', type: 'negative' },
+                    { text: 'Sans objet dans les mains', type: 'negative' },
                   ].map((critere) => (
                     <div
                       key={critere.text}
@@ -611,7 +613,7 @@ export default function InscriptionMireille() {
                   🔒 Vos données vous appartiennent
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,232,216,0.6)' }}>
-                  R3 est une SASU française dont le siège social est à Paris et le bureau à Marseille. Vous pouvez demander la suppression de toutes vos données à tout moment, par simple demande par mail.
+                  R3 est une société française dont le siège social est à Paris et le bureau à Marseille. Vous pouvez demander la suppression de toutes vos données à tout moment, par simple demande par mail.
                 </p>
               </div>
 
