@@ -502,6 +502,7 @@ export default function InscriptionMireille() {
                   {[
                     { text: 'Plein pied', type: 'positive' },
                     { text: 'Visage de face', type: 'positive' },
+                    { text: 'Sans lunettes', type: 'negative' },
                     { text: 'Sans chapeau', type: 'negative' },
                     { text: 'Sans téléphone', type: 'negative' },
                   ].map((critere) => (
