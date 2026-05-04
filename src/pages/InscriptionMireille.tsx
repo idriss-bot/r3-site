@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import Footer from '../components/Footer';
+import { compressImage } from '../utils/imageCompression';
 
 const COUNTRIES = [
   'France', 'Belgique', 'Suisse', 'Luxembourg',
@@ -190,12 +191,21 @@ export default function InscriptionMireille() {
       formData.append('country', country);
       formData.append('identity_confirmed', 'true');
       formData.append('cgu', 'true');
-      formData.append('photo', photo!);
+      const compressedPhoto = await compressImage(photo!);
+      formData.append('photo', compressedPhoto);
 
-      const res = await fetch('https://mireille.r-3.fr/api/signup', {
-        method: 'POST',
-        body: formData,
-      });
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 90_000);
+      let res: Response;
+      try {
+        res = await fetch('https://mireille.r-3.fr/api/signup', {
+          method: 'POST',
+          body: formData,
+          signal: controller.signal,
+        });
+      } finally {
+        clearTimeout(timeoutId);
+      }
 
       if (res.ok) {
         setSuccess(true);
@@ -218,8 +228,21 @@ export default function InscriptionMireille() {
       }
 
       setFormError('Une erreur est survenue, veuillez réessayer.');
-    } catch {
-      setFormError('Une erreur est survenue, veuillez réessayer.');
+    } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        setFormError(
+          "L'envoi a été interrompu (connexion trop lente). "
+          + 'Réessayez sur une connexion WiFi stable ou contactez-nous au +33 7 62 45 64 91.',
+        );
+      } else if (err instanceof TypeError) {
+        setFormError(
+          'Impossible de joindre le serveur. '
+          + 'Vérifiez votre connexion internet, désactivez votre VPN ou bloqueur de publicités si vous en avez un, '
+          + 'puis réessayez. Si le problème persiste, contactez-nous au +33 7 62 45 64 91.',
+        );
+      } else {
+        setFormError('Une erreur est survenue, veuillez réessayer.');
+      }
     } finally {
       setLoading(false);
     }
