@@ -235,11 +235,9 @@ export default function InscriptionMireille() {
           + 'Réessayez sur une connexion WiFi stable ou contactez-nous au +33 7 62 45 64 91.',
         );
       } else if (err instanceof TypeError) {
-        setFormError(
-          'Impossible de joindre le serveur. '
-          + 'Vérifiez votre connexion internet, désactivez votre VPN ou bloqueur de publicités si vous en avez un, '
-          + 'puis réessayez. Si le problème persiste, contactez-nous au +33 7 62 45 64 91.',
-        );
+        // Bug réseau (DNS opérateur, blocage, etc.) — redirection vers le formulaire Tally de secours
+        window.location.href = 'https://tally.so/r/XxONre';
+        return;
       } else {
         setFormError('Une erreur est survenue, veuillez réessayer.');
       }
