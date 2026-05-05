@@ -702,7 +702,7 @@ export default function InscriptionMireille() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="font-heading transition-opacity disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center"
+                  className="font-heading transition-opacity disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center whitespace-nowrap"
                   style={{
                     background: '#25d366',
                     color: '#ffffff',
