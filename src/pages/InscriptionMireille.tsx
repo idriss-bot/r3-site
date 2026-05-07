@@ -99,6 +99,7 @@ export default function InscriptionMireille() {
   const [photo, setPhoto] = useState<File | null>(null);
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState('');
+  const [glasses, setGlasses] = useState<boolean | null>(null);
   const [identityConfirmed, setIdentityConfirmed] = useState(false);
   const [cgu, setCgu] = useState(false);
 
@@ -161,6 +162,7 @@ export default function InscriptionMireille() {
     if (!name.trim()) errors.name = 'Le nom est requis.';
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Email invalide.';
     if (!photo) errors.photo = 'Une photo est requise.';
+    if (glasses === null) errors.glasses = 'Veuillez indiquer si vous portez des lunettes sur la photo.';
     if (!identityConfirmed) errors.identityConfirmed = 'Vous devez confirmer que la personne sur la photo est bien vous-même.';
     if (!cgu) errors.cgu = 'Vous devez accepter les CGU.';
 
@@ -191,6 +193,7 @@ export default function InscriptionMireille() {
       formData.append('country', country);
       formData.append('identity_confirmed', 'true');
       formData.append('cgu', 'true');
+      formData.append('glasses', glasses ? 'true' : 'false');
       const compressedPhoto = await compressImage(photo!);
       formData.append('photo', compressedPhoto);
 
@@ -544,7 +547,6 @@ export default function InscriptionMireille() {
                     { text: 'Visage de face et éclairé', type: 'positive' },
                     { text: 'Photo couleur HD', type: 'positive' },
                     { text: 'Seul sur la photo', type: 'positive' },
-                    { text: 'Sans lunettes', type: 'negative' },
                     { text: 'Sans chapeau', type: 'negative' },
                     { text: 'Sans objet dans les mains', type: 'negative' },
                   ].map((critere) => (
@@ -638,6 +640,32 @@ export default function InscriptionMireille() {
                 {(photoError || fieldErrors.photo) && (
                   <p className="mt-1 text-xs text-red-400">{photoError || fieldErrors.photo}</p>
                 )}
+              </div>
+
+              {/* Lunettes */}
+              <div>
+                <label className="block text-sm text-white/60 mb-2">Avez-vous des lunettes sur la photo ? *</label>
+                <div className="flex gap-3">
+                  {[
+                    { label: 'Oui', value: true },
+                    { label: 'Non', value: false },
+                  ].map((opt) => (
+                    <button
+                      key={opt.label}
+                      type="button"
+                      onClick={() => setGlasses(opt.value)}
+                      className={`flex-1 py-3 rounded-xl text-sm font-medium transition-colors ${
+                        glasses === opt.value
+                          ? 'bg-primary/20 border-primary text-primary'
+                          : 'bg-surface-light border-white/10 text-white/60 hover:border-white/30'
+                      } border`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+                <p className="mt-1.5 text-xs text-white/40">Pour que vos avatars conservent vos lunettes si vous en portez.</p>
+                {fieldErrors.glasses && <p className="mt-1 text-xs text-red-400">{fieldErrors.glasses}</p>}
               </div>
 
               {/* Encart confidentialité */}
@@ -777,7 +805,6 @@ export default function InscriptionMireille() {
                 { text: 'Visage de face et éclairé', type: 'positive' },
                 { text: 'Photo couleur HD', type: 'positive' },
                 { text: 'Seul sur la photo', type: 'positive' },
-                { text: 'Sans lunettes', type: 'negative' },
                 { text: 'Sans chapeau', type: 'negative' },
                 { text: 'Sans objet dans les mains', type: 'negative' },
               ].map((critere) => (
