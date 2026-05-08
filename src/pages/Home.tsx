@@ -131,9 +131,9 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-3 z-50">
-            <a href="/inscription-mireille" className="hidden md:inline-flex items-center gap-2 border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-6 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
+            <a href="/inscription-mireille" className="hidden md:inline-flex items-center gap-2 border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-4 py-3 rounded-full text-[10px] uppercase tracking-[0.15em] transition-all duration-300">
               <WhatsAppIcon size={14} color="#25D366" />
-              Tester Mireille
+              Tester Mireille Gratuitement
             </a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="hidden md:block border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
               Prendre rendez-vous
@@ -142,6 +142,14 @@ export default function Home() {
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+        </div>
+
+        {/* Mobile CTA visible directement */}
+        <div className="md:hidden px-6 pb-4">
+          <a href="/inscription-mireille" className="flex items-center justify-center gap-2 w-full bg-whatsapp hover:bg-whatsapp-hover text-white px-6 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 font-bold">
+            <WhatsAppIcon size={14} color="#ffffff" />
+            Tester Mireille Gratuitement
+          </a>
         </div>
 
         {/* Mobile Menu */}
@@ -165,7 +173,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
               <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur WhatsApp</span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
+                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur <BadgeWhatsApp size={28} /></span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -174,7 +182,7 @@ export default function Home() {
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col items-center justify-center gap-4">
                 <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                   Prendre RDV
                 </a>
@@ -198,15 +206,15 @@ export default function Home() {
       {/* SECTION 2 : LOGOS RÉSEAUX */}
       <section className="py-16 border-y border-white/5 bg-surface-light/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight text-balance text-white">
-            Ils sont chez Orpi, Century 21, IAD, Keller Williams, SAFTI ou effiCity. <span className="gold-gradient-text font-semibold whitespace-nowrap">Ils nous font confiance.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight text-balance text-white">
+            <span className="gold-gradient-text font-semibold">Ils nous font confiance.</span>
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
-            <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
-            <img src="/images/logo-efficity.png" alt="effiCity" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
+            <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="/images/logo-efficity.png" alt="effiCity" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
           </div>
         </div>
       </section>
@@ -403,21 +411,21 @@ export default function Home() {
                     width: 130,
                     height: 130,
                     borderRadius: '50%',
-                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.25), rgba(194,129,53,0.08))',
-                    border: '3px double #C28135',
-                    boxShadow: '0 0 30px rgba(194,129,53,0.3), inset 0 0 20px rgba(194,129,53,0.1)',
+                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.45), rgba(194,129,53,0.25))',
+                    border: '4px double #E8A552',
+                    boxShadow: '0 0 40px rgba(194,129,53,0.6), 0 0 80px rgba(194,129,53,0.3), inset 0 0 25px rgba(194,129,53,0.2)',
                     transform: 'rotate(-8deg)',
                   }}
                 >
-                  <div className="absolute inset-2 rounded-full border border-[#C28135]/40"></div>
+                  <div className="absolute inset-2 rounded-full border-2 border-white/30"></div>
                   <div className="text-center px-2">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="mx-auto mb-1">
-                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.3)" stroke="#C28135" strokeWidth="1.5" />
-                      <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(255,255,255,0.2)" stroke="#ffffff" strokeWidth="1.5" />
+                      <path d="M9 12l2 2 4-4" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <div
-                      className="font-heading gold-gradient-text"
-                      style={{ fontSize: 8, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase', lineHeight: 1.3 }}
+                      className="font-heading text-white"
+                      style={{ fontSize: 8, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
                     >
                       Garantie<br/>
                       Satisfait<br/>
@@ -436,21 +444,21 @@ export default function Home() {
                     width: 110,
                     height: 110,
                     borderRadius: '50%',
-                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.25), rgba(194,129,53,0.08))',
-                    border: '2px double #C28135',
-                    boxShadow: '0 0 20px rgba(194,129,53,0.3), inset 0 0 15px rgba(194,129,53,0.1)',
+                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.45), rgba(194,129,53,0.25))',
+                    border: '4px double #E8A552',
+                    boxShadow: '0 0 40px rgba(194,129,53,0.6), 0 0 80px rgba(194,129,53,0.3), inset 0 0 25px rgba(194,129,53,0.2)',
                     transform: 'rotate(-8deg)',
                   }}
                 >
-                  <div className="absolute inset-2 rounded-full border border-[#C28135]/40"></div>
+                  <div className="absolute inset-2 rounded-full border-2 border-white/30"></div>
                   <div className="text-center px-2">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-0.5">
-                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.3)" stroke="#C28135" strokeWidth="1.5" />
-                      <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(255,255,255,0.2)" stroke="#ffffff" strokeWidth="1.5" />
+                      <path d="M9 12l2 2 4-4" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <div
-                      className="font-heading gold-gradient-text"
-                      style={{ fontSize: 7, fontWeight: 800, letterSpacing: 0.8, textTransform: 'uppercase', lineHeight: 1.3 }}
+                      className="font-heading text-white"
+                      style={{ fontSize: 7, fontWeight: 800, letterSpacing: 0.8, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
                     >
                       Garantie<br/>
                       Satisfait<br/>
@@ -468,7 +476,7 @@ export default function Home() {
               <ul className="space-y-5 text-left max-w-sm mx-auto mb-10">
                 <li className="flex items-start gap-4 text-sm font-light text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span><span className="gold-gradient-text font-semibold">10 minutes de vidéos par mois</span> via WhatsApp</span>
+                  <span><span className="gold-gradient-text font-semibold">10 minutes de vidéos par mois</span> via <BadgeWhatsApp size={13} /></span>
                 </li>
                 <li className="flex items-start gap-4 text-sm font-light text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -476,7 +484,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col items-center justify-center gap-4">
                 <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-8 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap w-full sm:w-auto">
                   Prendre RDV
                 </a>
@@ -530,7 +538,7 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4">
               <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Prendre RDV
               </a>
