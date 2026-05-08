@@ -66,6 +66,28 @@ function VideoPlayer({ src, aspectRatio = "16/9" }: { src: string; aspectRatio?:
   );
 }
 
+function BadgeWhatsAppHero() {
+  return (
+    <span
+      className="inline-flex items-center align-middle rounded-full whitespace-nowrap"
+      style={{
+        background: 'rgba(37,211,102,0.15)',
+        color: '#25d366',
+        padding: '0.05em 0.4em',
+        fontSize: '0.85em',
+        fontWeight: 600,
+        gap: '0.25em',
+        verticalAlign: 'baseline',
+      }}
+    >
+      <svg width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="#25d366" style={{ flexShrink: 0 }}>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+      </svg>
+      WhatsApp
+    </span>
+  );
+}
+
 function BadgeWhatsApp({ size = 13 }: { size?: number }) {
   return (
     <span
@@ -144,14 +166,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile CTA visible directement */}
-        <div className="md:hidden px-6 pb-4">
-          <a href="/inscription-mireille" className="flex items-center justify-center gap-2 w-full bg-whatsapp hover:bg-whatsapp-hover text-white px-6 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 font-bold">
-            <WhatsAppIcon size={14} color="#ffffff" />
-            Tester Mireille Gratuitement
-          </a>
-        </div>
-
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-24 left-0 right-0 bg-bg/95 backdrop-blur-xl border-b border-white/5 p-6 flex flex-col gap-6 shadow-2xl">
@@ -160,6 +174,10 @@ export default function Home() {
             <a href="#offre" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">L'offre</a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4 block text-center">
               Prendre rendez-vous
+            </a>
+            <a href="/inscription-mireille" onClick={() => setIsMobileMenuOpen(false)} className="border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full flex items-center justify-center gap-2">
+              <WhatsAppIcon size={14} color="#25D366" />
+              Tester Mireille Gratuitement
             </a>
           </div>
         )}
@@ -173,7 +191,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
               <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur <BadgeWhatsApp size={28} /></span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
+                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur <BadgeWhatsAppHero /></span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -211,6 +229,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
@@ -278,7 +297,7 @@ export default function Home() {
                       <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Directeur Octo Immo à Toulouse</p>
                     </div>
                   </div>
-                  <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
+                  <div className="space-y-4 text-gray-300 font-light text-base sm:text-lg md:text-xl leading-relaxed">
                     <p>Son agence avait gagné 59 exclusivités en 2024 et son CA en transaction était en <span className="gold-gradient-text font-semibold">baisse de 36 %.</span></p>
                     <p>Sur les 12 premiers mois de ses vidéos IA, il a dépassé <span className="gold-gradient-text font-semibold whitespace-nowrap">1 000 000 de vues</span> sur les réseaux sociaux.</p>
                     <p className="text-white font-medium">Résultat : <span className="gold-gradient-text font-semibold whitespace-nowrap">101 exclusivités</span>, +60 offres acceptées et plus de <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">600 000 € HT</span> d'honoraires générés.</span></p>
@@ -347,7 +366,7 @@ export default function Home() {
               <FadeIn delay={0.2}>
                 <span className="text-primary/80 font-body tracking-[0.3em] uppercase text-xs mb-8 block">Le fondateur</span>
                 <h2 className="text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight">Le fondateur <span className="italic gold-gradient-text">de Mireille</span></h2>
-                <div className="space-y-6 text-sm md:text-base text-gray-300 font-light leading-relaxed">
+                <div className="space-y-6 text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed">
                   <p>De 2017 à 2022, j'étais chasseur d'appartements à Paris. Je connais ce <span className="gold-gradient-text font-semibold">métier de l'intérieur</span> : la pression des mandats, les rendez-vous qui ne convertissent pas, <span className="whitespace-nowrap">le temps qui manque toujours.</span></p>
                   <p>Pendant le confinement, je me lance sur LinkedIn. En 3 mois, ma communauté passe de 240 à 7 000 abonnés. Mon profil devient un vrai levier de business. Je comprends une chose : <span className="gold-gradient-text font-semibold whitespace-nowrap">dans l'immobilier, celui qui est visible gagne.</span></p>
                   <p>En 2023, je déménage à Marseille et je décide d'aider mes confrères à réussir là où la plupart échouent : générer du business sur les réseaux sociaux. Pendant 2 ans, j'accompagne plus de 30 agents dans toute la France. Résultat : <span className="gold-gradient-text font-semibold whitespace-nowrap">plus d'un million d'euros de CA générés</span> via LinkedIn et Facebook, simplement avec du <span className="whitespace-nowrap">texte et des images.</span></p>
@@ -372,7 +391,7 @@ export default function Home() {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-primary" fill="currentColor" />)}
               </div>
               <blockquote className="text-2xl md:text-4xl font-heading font-light leading-relaxed mb-16 text-white tracking-tight italic text-balance">
-                "Nos clients adorent le contenu des vidéos et surtout elles nous offrent une <span className="gold-gradient-text font-semibold">énorme visibilité</span> sur les réseaux sociaux. Je ne m'attendais pas à obtenir un tel <span className="gold-gradient-text font-semibold">retour sur investissement</span>. Le tout sans jamais avoir à <span className="whitespace-nowrap">m'en occuper. Merci Idriss."</span>
+                <span className="md:whitespace-nowrap">"Nos clients adorent</span> <span className="md:whitespace-nowrap">le contenu des vidéos</span> <span className="md:whitespace-nowrap">et surtout elles nous offrent</span> <span className="md:whitespace-nowrap">une <span className="gold-gradient-text font-semibold">énorme visibilité</span></span> <span className="md:whitespace-nowrap">sur les réseaux sociaux.</span> <span className="md:whitespace-nowrap">Je ne m'attendais pas</span> <span className="md:whitespace-nowrap">à obtenir un tel</span> <span className="md:whitespace-nowrap"><span className="gold-gradient-text font-semibold">retour sur investissement</span>.</span> <span className="md:whitespace-nowrap">Le tout sans jamais</span> <span className="md:whitespace-nowrap">avoir à m'en occuper.</span> <span className="md:whitespace-nowrap">Merci Idriss."</span>
               </blockquote>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="w-20 h-20 rounded-full bg-surface-light overflow-hidden border border-white/10 shadow-lg">
@@ -436,50 +455,55 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Sceau Garantie — Mobile inline */}
-              <div className="md:hidden flex justify-center mb-6">
+              {/* Sceau Garantie — Mobile top-left exterior */}
+              <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 md:hidden z-20">
                 <div
                   className="relative flex items-center justify-center"
                   style={{
-                    width: 110,
-                    height: 110,
+                    width: 100,
+                    height: 100,
                     borderRadius: '50%',
                     background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.45), rgba(194,129,53,0.25))',
-                    border: '4px double #E8A552',
-                    boxShadow: '0 0 40px rgba(194,129,53,0.6), 0 0 80px rgba(194,129,53,0.3), inset 0 0 25px rgba(194,129,53,0.2)',
+                    border: '3px double #E8A552',
+                    boxShadow: '0 0 30px rgba(194,129,53,0.5), inset 0 0 18px rgba(194,129,53,0.15)',
                     transform: 'rotate(-8deg)',
                   }}
                 >
                   <div className="absolute inset-2 rounded-full border-2 border-white/30"></div>
-                  <div className="text-center px-2">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-0.5">
+                  <div className="text-center px-1.5">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="mx-auto mb-0.5">
                       <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(255,255,255,0.2)" stroke="#ffffff" strokeWidth="1.5" />
                       <path d="M9 12l2 2 4-4" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <div
                       className="font-heading text-white"
-                      style={{ fontSize: 7, fontWeight: 800, letterSpacing: 0.8, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                      style={{ fontSize: 6, fontWeight: 800, letterSpacing: 0.6, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
                     >
                       Garantie<br/>
                       Satisfait<br/>
                       ou Remboursé<br/>
-                      <span style={{ fontSize: 9 }}>14 jours</span>
+                      <span style={{ fontSize: 8 }}>14 jours</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="mb-10">
-                <div className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2">200 € <span className="text-lg font-body text-gray-300">HT / mois</span></div>
+                <div
+                  className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2"
+                  style={{ filter: 'drop-shadow(0 0 30px rgba(194,129,53,0.6)) drop-shadow(0 0 60px rgba(194,129,53,0.3))' }}
+                >
+                  200 € <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>HT / mois</span>
+                </div>
               </div>
 
               <ul className="space-y-5 text-left max-w-sm mx-auto mb-10">
-                <li className="flex items-start gap-4 text-sm font-light text-gray-300">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4 text-base sm:text-lg md:text-xl font-light text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
                   <span><span className="gold-gradient-text font-semibold">10 minutes de vidéos par mois</span> via <BadgeWhatsApp size={13} /></span>
                 </li>
-                <li className="flex items-start gap-4 text-sm font-light text-gray-300">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4 text-base sm:text-lg md:text-xl font-light text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
                   <span>Engagement <span className="gold-gradient-text font-semibold">12 mois</span></span>
                 </li>
               </ul>
@@ -534,7 +558,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-lg md:text-xl text-gray-400 mb-16 max-w-2xl mx-auto font-light leading-relaxed text-balance">
-              Une photo. Un enregistrement vocal. On s'occupe <span className="whitespace-nowrap">du reste, <span className="gold-gradient-text font-semibold">toute l'année.</span></span>
+              Une photo. Un enregistrement vocal. <span className="gold-gradient-text font-semibold">Mireille s'occupe du reste.</span>
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
