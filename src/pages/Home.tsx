@@ -130,7 +130,11 @@ export default function Home() {
             <a href="#offre" className="text-white hover:text-primary transition-colors">L'offre</a>
           </div>
 
-          <div className="flex items-center gap-4 z-50">
+          <div className="flex items-center gap-3 z-50">
+            <a href="/inscription-mireille" className="hidden md:inline-flex items-center gap-2 border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-6 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
+              <WhatsAppIcon size={14} color="#25D366" />
+              Tester Mireille
+            </a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="hidden md:block border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
               Prendre rendez-vous
             </a>
@@ -160,13 +164,13 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                <span className="whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="whitespace-nowrap">à partir d'une photo</span> <span className="whitespace-nowrap">d'un simple vocal</span> <span className="whitespace-nowrap">en 15 minutes</span> <span className="whitespace-nowrap">sur WhatsApp</span> <span className="whitespace-nowrap">grâce à l'IA.</span>
+              <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
+                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur WhatsApp</span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p className="text-lg md:text-xl text-white mb-16 max-w-2xl mx-auto leading-relaxed font-light text-balance">
-                <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">Mireille</span> est une assistante IA</span> <span className="whitespace-nowrap">qui s'occupe de tout pour vous :</span> <span className="whitespace-nowrap">voix,</span> <span className="whitespace-nowrap">création de votre avatar,</span> <span className="whitespace-nowrap">mise en scène.</span> <span className="whitespace-nowrap">Vous recevez</span> <span className="whitespace-nowrap">une vidéo prête à publier</span> <span className="whitespace-nowrap">sur tous vos réseaux</span> <span className="whitespace-nowrap">en 15 petites minutes.</span>
+              <p className="text-base sm:text-lg md:text-xl text-white mb-16 max-w-2xl mx-auto leading-relaxed font-light text-balance">
+                <span className="md:whitespace-nowrap"><span className="gold-gradient-text font-semibold">Mireille</span> est une assistante IA</span> <span className="md:whitespace-nowrap">qui s'occupe de tout pour vous :</span> <span className="md:whitespace-nowrap">voix,</span> <span className="md:whitespace-nowrap">création de votre avatar,</span> <span className="md:whitespace-nowrap">mise en scène.</span> <span className="md:whitespace-nowrap">Vous recevez</span> <span className="md:whitespace-nowrap">une vidéo prête à publier</span> <span className="md:whitespace-nowrap">sur tous vos réseaux</span> <span className="md:whitespace-nowrap">en 15 petites minutes.</span>
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
@@ -194,9 +198,9 @@ export default function Home() {
       {/* SECTION 2 : LOGOS RÉSEAUX */}
       <section className="py-16 border-y border-white/5 bg-surface-light/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm md:text-base text-white mb-12 font-body max-w-3xl mx-auto text-balance leading-relaxed">
+          <h2 className="text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight text-balance text-white">
             Ils sont chez Orpi, Century 21, IAD, Keller Williams, SAFTI ou effiCity. <span className="gold-gradient-text font-semibold whitespace-nowrap">Ils nous font confiance.</span>
-          </p>
+          </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-60 hover:opacity-90 transition-opacity" />
@@ -253,7 +257,7 @@ export default function Home() {
             <FadeIn delay={0.1}>
               <div className="glass-panel p-8 md:p-12 rounded-2xl hover:border-primary/30 transition-all duration-500 flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
                 <div className="w-full md:w-1/3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8">
-                  <div className="gold-gradient-text text-5xl md:text-6xl font-heading font-light mb-2 group-hover:scale-105 transition-transform origin-center md:origin-left">+ 600k €</div>
+                  <div className="gold-gradient-text text-5xl md:text-6xl font-heading font-light mb-2 group-hover:scale-105 transition-transform origin-center md:origin-left whitespace-nowrap">+ 600k €</div>
                   <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur Instagram</div>
                 </div>
                 <div className="w-full md:w-2/3">
@@ -297,7 +301,7 @@ export default function Home() {
             {[
               { num: '1', node: <>Inscrivez-vous</> },
               { num: '2', node: <>Vocal sur <BadgeWhatsApp size={12} /></> },
-              { num: '3', node: <><span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> réalise votre vidéo en 15 minutes</> },
+              { num: '3', node: <><span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> réalise votre vidéo <span className="whitespace-nowrap">en 15 minutes</span></> },
             ].map((step, i) => (
               <FadeIn key={step.num} delay={i * 0.1}>
                 <div
@@ -311,7 +315,7 @@ export default function Home() {
                   <div className="font-heading" style={{ fontSize: 32, color: '#C28135', fontWeight: 600, marginBottom: 10 }}>
                     {step.num}
                   </div>
-                  <div className="text-sm text-[#f5e8d8]" style={{ lineHeight: 1.5 }}>{step.node}</div>
+                  <div className="text-base md:text-lg text-[#f5e8d8]" style={{ lineHeight: 1.5 }}>{step.node}</div>
                 </div>
               </FadeIn>
             ))}
@@ -382,18 +386,80 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <FadeIn>
-              <p
-                className="font-heading mb-6"
-                style={{ textTransform: 'uppercase', letterSpacing: 2.5, fontSize: 11, color: '#8a7560' }}
-              >
-                L'offre Mireille
-              </p>
-              <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance">Une seule offre, <span className="italic gold-gradient-text">tout simplement.</span></h2>
+              <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance">L'offre <span className="italic gold-gradient-text">Mireille</span></h2>
             </FadeIn>
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-14 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)]">
+            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-14 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
+
+              {/* Sceau Garantie — Top-left exterior (desktop) */}
+              <div
+                className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 hidden md:flex z-20"
+              >
+                <div
+                  className="relative flex items-center justify-center"
+                  style={{
+                    width: 130,
+                    height: 130,
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.25), rgba(194,129,53,0.08))',
+                    border: '3px double #C28135',
+                    boxShadow: '0 0 30px rgba(194,129,53,0.3), inset 0 0 20px rgba(194,129,53,0.1)',
+                    transform: 'rotate(-8deg)',
+                  }}
+                >
+                  <div className="absolute inset-2 rounded-full border border-[#C28135]/40"></div>
+                  <div className="text-center px-2">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="mx-auto mb-1">
+                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.3)" stroke="#C28135" strokeWidth="1.5" />
+                      <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <div
+                      className="font-heading gold-gradient-text"
+                      style={{ fontSize: 8, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase', lineHeight: 1.3 }}
+                    >
+                      Garantie<br/>
+                      Satisfait<br/>
+                      ou Remboursé<br/>
+                      <span style={{ fontSize: 11 }}>14 jours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sceau Garantie — Mobile inline */}
+              <div className="md:hidden flex justify-center mb-6">
+                <div
+                  className="relative flex items-center justify-center"
+                  style={{
+                    width: 110,
+                    height: 110,
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.25), rgba(194,129,53,0.08))',
+                    border: '2px double #C28135',
+                    boxShadow: '0 0 20px rgba(194,129,53,0.3), inset 0 0 15px rgba(194,129,53,0.1)',
+                    transform: 'rotate(-8deg)',
+                  }}
+                >
+                  <div className="absolute inset-2 rounded-full border border-[#C28135]/40"></div>
+                  <div className="text-center px-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-0.5">
+                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.3)" stroke="#C28135" strokeWidth="1.5" />
+                      <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <div
+                      className="font-heading gold-gradient-text"
+                      style={{ fontSize: 7, fontWeight: 800, letterSpacing: 0.8, textTransform: 'uppercase', lineHeight: 1.3 }}
+                    >
+                      Garantie<br/>
+                      Satisfait<br/>
+                      ou Remboursé<br/>
+                      <span style={{ fontSize: 9 }}>14 jours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div className="mb-10">
                 <div className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2">200 € <span className="text-lg font-body text-gray-300">HT / mois</span></div>
@@ -409,39 +475,6 @@ export default function Home() {
                   <span>Engagement <span className="gold-gradient-text font-semibold">12 mois</span></span>
                 </li>
               </ul>
-
-              {/* Sceau Garantie */}
-              <div className="relative my-12 flex justify-center">
-                <div
-                  className="relative flex items-center justify-center"
-                  style={{
-                    width: 180,
-                    height: 180,
-                    borderRadius: '50%',
-                    background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.25), rgba(194,129,53,0.08))',
-                    border: '3px double #C28135',
-                    boxShadow: '0 0 30px rgba(194,129,53,0.3), inset 0 0 20px rgba(194,129,53,0.1)',
-                    transform: 'rotate(-8deg)',
-                  }}
-                >
-                  <div className="absolute inset-3 rounded-full border border-[#C28135]/40"></div>
-                  <div className="text-center px-4">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="mx-auto mb-1">
-                      <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.3)" stroke="#C28135" strokeWidth="1.5" />
-                      <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <div
-                      className="font-heading gold-gradient-text"
-                      style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.5, textTransform: 'uppercase', lineHeight: 1.3 }}
-                    >
-                      Garantie<br/>
-                      Satisfait<br/>
-                      ou Remboursé<br/>
-                      <span style={{ fontSize: 14 }}>14 jours</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-8 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap w-full sm:w-auto">
