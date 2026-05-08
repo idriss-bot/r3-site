@@ -175,8 +175,7 @@ export default function Home() {
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4 block text-center">
               Prendre rendez-vous
             </a>
-            <a href="/inscription-mireille" onClick={() => setIsMobileMenuOpen(false)} className="border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full flex items-center justify-center gap-2">
-              <WhatsAppIcon size={14} color="#25D366" />
+            <a href="/inscription-mireille" onClick={() => setIsMobileMenuOpen(false)} className="border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full flex items-center justify-center text-center">
               Tester Mireille Gratuitement
             </a>
           </div>
@@ -190,8 +189,8 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
-              <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur <BadgeWhatsAppHero /></span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
+                <span className="md:whitespace-nowrap"><span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos</span> <span className="md:whitespace-nowrap">à partir d'une photo</span> <span style={{ color: '#C28135' }}>&amp;</span> <span className="md:whitespace-nowrap">d'un simple vocal</span> <span className="md:whitespace-nowrap">en 15 minutes</span> <span className="md:whitespace-nowrap">sur <BadgeWhatsAppHero /></span> <span className="md:whitespace-nowrap">grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -229,7 +228,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
-            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-20 w-56 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
@@ -418,7 +417,7 @@ export default function Home() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-14 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
+            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-12 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
 
               {/* Sceau Garantie — Top-left exterior (desktop) */}
               <div
@@ -455,34 +454,34 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Sceau Garantie — Mobile top-left exterior */}
-              <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 md:hidden z-20">
+              {/* Sceau Garantie — Mobile centré au-dessus du prix */}
+              <div className="md:hidden flex justify-center mb-6">
                 <div
                   className="relative flex items-center justify-center"
                   style={{
-                    width: 100,
-                    height: 100,
+                    width: 130,
+                    height: 130,
                     borderRadius: '50%',
                     background: 'radial-gradient(circle at 30% 30%, rgba(194,129,53,0.45), rgba(194,129,53,0.25))',
-                    border: '3px double #E8A552',
-                    boxShadow: '0 0 30px rgba(194,129,53,0.5), inset 0 0 18px rgba(194,129,53,0.15)',
+                    border: '4px double #E8A552',
+                    boxShadow: '0 0 40px rgba(194,129,53,0.6), 0 0 80px rgba(194,129,53,0.3), inset 0 0 25px rgba(194,129,53,0.2)',
                     transform: 'rotate(-8deg)',
                   }}
                 >
                   <div className="absolute inset-2 rounded-full border-2 border-white/30"></div>
-                  <div className="text-center px-1.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="mx-auto mb-0.5">
+                  <div className="text-center px-2">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="mx-auto mb-1">
                       <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(255,255,255,0.2)" stroke="#ffffff" strokeWidth="1.5" />
                       <path d="M9 12l2 2 4-4" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <div
                       className="font-heading text-white"
-                      style={{ fontSize: 6, fontWeight: 800, letterSpacing: 0.6, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                      style={{ fontSize: 8, fontWeight: 800, letterSpacing: 1, textTransform: 'uppercase', lineHeight: 1.3, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
                     >
                       Garantie<br/>
                       Satisfait<br/>
                       ou Remboursé<br/>
-                      <span style={{ fontSize: 8 }}>14 jours</span>
+                      <span style={{ fontSize: 11 }}>14 jours</span>
                     </div>
                   </div>
                 </div>
