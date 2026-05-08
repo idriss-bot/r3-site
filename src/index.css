@@ -17,7 +17,9 @@ html {
   --color-bg: #030303;
   --color-surface: #0A0A0A;
   --color-surface-light: #121212;
-  
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE57;
+
   --font-heading: 'Karla', system-ui, sans-serif;
   --font-body: 'Cardo', Georgia, serif;
 }

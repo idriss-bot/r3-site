@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Star, ChevronDown, ArrowRight, Menu, X } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import Footer from '../components/Footer';
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) {
@@ -17,14 +18,99 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
+function VideoPlayer({ src, aspectRatio = "16/9" }: { src: string; aspectRatio?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <div
+      className="relative overflow-hidden"
+      style={{ aspectRatio, borderRadius: 20, boxShadow: '0 0 40px rgba(194,129,53,0.3)' }}
+    >
+      <video
+        ref={videoRef}
+        src={src}
+        preload="metadata"
+        playsInline
+        controls={isPlaying}
+        className="w-full h-full object-cover"
+      />
+      {!isPlaying && (
+        <button
+          type="button"
+          onClick={() => {
+            videoRef.current?.play();
+            setIsPlaying(true);
+          }}
+          className="absolute inset-0 flex items-center justify-center"
+          aria-label="Lire la vidéo"
+        >
+          <div
+            className="flex items-center justify-center rounded-full transition-transform hover:scale-105"
+            style={{
+              width: 64,
+              height: 64,
+              background: 'rgba(194,129,53,0.85)',
+              backdropFilter: 'blur(8px)',
+              border: '1.5px solid rgba(255,255,255,0.2)',
+              boxShadow: '0 4px 24px rgba(194,129,53,0.4)',
+            }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </button>
+      )}
+    </div>
+  );
+}
+
+function BadgeWhatsApp({ size = 13 }: { size?: number }) {
+  return (
+    <span
+      className="inline-flex items-center align-middle rounded-full"
+      style={{
+        background: 'rgba(37,211,102,0.12)',
+        color: '#25d366',
+        padding: '2px 9px',
+        fontSize: size,
+        fontWeight: 500,
+        gap: 4,
+      }}
+    >
+      <WhatsAppIcon size={size} color="#25d366" />
+      WhatsApp
+    </span>
+  );
+}
+
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const faqs = [
-    { q: "Combien de temps dure la collaboration ?", a: <><span className="gold-gradient-text font-semibold">Engagement</span> de 2, 6 ou 12 mois <span className="whitespace-nowrap">selon l'offre choisie.</span></> },
+    { q: "Combien de temps dure la collaboration ?", a: <><span className="gold-gradient-text font-semibold">Engagement</span> de <span className="whitespace-nowrap">12 mois.</span></> },
     { q: "Est-ce qu'on peut payer en CPF ou AGEFICE ?", a: <span className="gold-gradient-text font-semibold">Non.</span> },
     { q: "Est-ce que vous publiez le contenu sur YouTube et TikTok ?", a: <>Nous publions actuellement sur TikTok, Instagram, Facebook et LinkedIn. YouTube est en cours de test, dès qu'il sera prêt, il sera intégré à notre offre. Si vous avez souscrit avant, il sera <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">ajouté sans surcoût.</span></span></> },
     { q: "Est-ce que c'est adapté pour moi si je suis en Suisse ou en Belgique ?", a: <><span className="gold-gradient-text font-semibold">Oui</span>, tant que vous ne nous <span className="whitespace-nowrap">battez plus au foot.</span></> }
+  ];
+
+  const realisations = [
+    {
+      video: "https://res.cloudinary.com/dvpvig9ww/video/upload/v1778059160/r3/videos/Ahmed%20RASHID/Ahmed%20RASHID%20136_1778059156.mp4",
+      name: "Ahmed Rashid",
+      role: "Agent immobilier à Limoges",
+    },
+    {
+      video: "https://res.cloudinary.com/dvpvig9ww/video/upload/v1778077982/r3/videos/Romain%20MARTINAUD/Romain%20MARTINAUD%20143_1778077980.mp4",
+      name: "Romain Martinaud",
+      role: "Co-fondateur d'Advance Immobilier à Toulouse",
+    },
+    {
+      video: "https://res.cloudinary.com/dvpvig9ww/video/upload/v1778237257/Camille_Nouguier_y3ttu8.mp4",
+      name: "Camille Nouguier",
+      role: "Conseillère immobilier IAD à Avignon",
+    },
   ];
 
   return (
@@ -34,12 +120,12 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between">
           <img src="/images/logo-r3.png" alt="R3" className="h-12 w-auto z-50" />
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-heading">
-            <a href="#etudes-de-cas" className="text-white hover:text-primary transition-colors">Études de cas</a>
+            <a href="#realisations" className="text-white hover:text-primary transition-colors">Réalisations</a>
             <a href="#comment-ca-marche" className="text-white hover:text-primary transition-colors">Comment ça marche</a>
-            <a href="#offres" className="text-white hover:text-primary transition-colors">Nos offres</a>
+            <a href="#offre" className="text-white hover:text-primary transition-colors">L'offre</a>
           </div>
 
           <div className="flex items-center gap-4 z-50">
@@ -55,9 +141,9 @@ export default function Home() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-24 left-0 right-0 bg-bg/95 backdrop-blur-xl border-b border-white/5 p-6 flex flex-col gap-6 shadow-2xl">
-            <a href="#etudes-de-cas" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Études de cas</a>
+            <a href="#realisations" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Réalisations</a>
             <a href="#comment-ca-marche" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Comment ça marche</a>
-            <a href="#offres" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">Nos offres</a>
+            <a href="#offre" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">L'offre</a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4 block text-center">
               Prendre rendez-vous
             </a>
@@ -68,36 +154,36 @@ export default function Home() {
       {/* SECTION 1 : HERO */}
       <section className="relative pt-48 pb-32 lg:pt-64 lg:pb-40 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn delay={0.1}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-light mb-10 leading-[1.1] tracking-tight text-balance mx-auto">
-                50 vidéos de vous à partir d'une <span className="italic gold-gradient-text">simple photo</span> <span className="whitespace-nowrap">grâce à l'IA.</span>
+                <span className="italic gold-gradient-text">Mireille</span> réalise vos vidéos à partir d'une photo et d'un simple vocal en 15 minutes sur <span className="whitespace-nowrap">WhatsApp grâce à l'IA.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-lg md:text-xl text-white mb-16 max-w-2xl mx-auto leading-relaxed font-light text-balance">
-                Une photo. Un enregistrement vocal. <span className="gold-gradient-text font-semibold whitespace-nowrap">On s'occupe du reste.</span><br className="hidden md:block"/>
-                Vos réseaux sociaux vivent sans vous : <span className="whitespace-nowrap">sans tournage,</span> <span className="whitespace-nowrap">sans stress,</span> <span className="gold-gradient-text font-semibold whitespace-nowrap">sans y penser.</span>
+                <span className="gold-gradient-text font-semibold">Mireille</span> est une assistante IA qui s'occupe de tout pour vous : voix, création de votre avatar, mise en scène. Vous recevez une vidéo prête à publier sur tous vos réseaux <span className="whitespace-nowrap">en 15 petites minutes.</span>
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
-                Je me dédouble grâce à l'IA
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-4 md:py-5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+                  Prendre RDV
+                </a>
+                <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-6 md:px-10 py-4 md:py-5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap">
+                  <WhatsAppIcon size={18} color="#ffffff" />
+                  <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
+                  <span className="sm:hidden">Tester gratuitement</span>
+                </a>
+              </div>
             </FadeIn>
           </div>
-          
+
           <FadeIn delay={0.5}>
-            <div className="mt-32 max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/KlJki5qhrnk"
-                title="R3 — Vidéos IA Immobilier"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <div className="mt-32 max-w-5xl mx-auto">
+              <VideoPlayer src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1777565768/Mireille_kqzj2t.mp4" aspectRatio="16/9" />
             </div>
           </FadeIn>
         </div>
@@ -119,17 +205,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 3 : SUCCÈS CLIENTS */}
+      {/* SECTION 3 : RÉALISATIONS MIREILLE */}
+      <section id="realisations" className="py-32 lg:py-48 bg-bg relative">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <FadeIn>
+              <p
+                className="font-heading mb-6"
+                style={{ textTransform: 'uppercase', letterSpacing: 2.5, fontSize: 11, color: '#8a7560' }}
+              >
+                Réalisations
+              </p>
+              <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance text-white">Les réalisations <span className="italic gold-gradient-text">de Mireille</span></h2>
+              <p className="text-lg text-gray-300 font-light text-balance">Trois agents immobiliers, trois vidéos générées en 15 minutes <span className="whitespace-nowrap">par Mireille.</span></p>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {realisations.map((r, i) => (
+              <FadeIn key={r.name} delay={i * 0.15}>
+                <div className="glass-panel rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500" style={{ boxShadow: '0 0 30px rgba(194,129,53,0.08)' }}>
+                  <VideoPlayer src={r.video} aspectRatio="9/16" />
+                  <div className="p-6">
+                    <h3 className="text-lg font-heading font-semibold text-white">{r.name}</h3>
+                    <p className="text-sm text-white/60 mt-1">{r.role}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 : SUCCÈS CLIENT — FABIAN BRUNA */}
       <section id="etudes-de-cas" className="py-32 lg:py-48 bg-bg relative">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-32">
             <FadeIn>
               <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance text-white">Ce que la visibilité change concrètement.</h2>
-              <p className="text-lg text-gray-300 font-light text-balance">Ils ont dit oui à <span className="gold-gradient-text font-semibold whitespace-nowrap">une photo.</span> Voilà ce qui s'est passé ensuite.</p>
+              <p className="text-lg text-gray-300 font-light text-balance">Il a dit oui à <span className="gold-gradient-text font-semibold whitespace-nowrap">une photo.</span> Voilà ce qui s'est passé ensuite.</p>
             </FadeIn>
           </div>
-          
-          <div className="flex flex-col gap-8 max-w-5xl mx-auto">
+
+          <div className="max-w-4xl mx-auto">
             <FadeIn delay={0.1}>
               <div className="glass-panel p-8 md:p-12 rounded-2xl hover:border-primary/30 transition-all duration-500 flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
                 <div className="w-full md:w-1/3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8">
@@ -154,56 +272,6 @@ export default function Home() {
                 </div>
               </div>
             </FadeIn>
-
-            <FadeIn delay={0.2}>
-              <div className="glass-panel p-8 md:p-12 rounded-2xl hover:border-primary/30 transition-all duration-500 flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
-                <div className="w-full md:w-1/3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8">
-                  <div className="gold-gradient-text text-5xl md:text-6xl font-heading font-light mb-2 group-hover:scale-105 transition-transform origin-center md:origin-left">270k €</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur Facebook</div>
-                </div>
-                <div className="w-full md:w-2/3">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
-                      <img src="/images/dorothee.jpg" alt="Dorothée Leprince" className="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-heading text-white">Dorothée Leprince</h3>
-                      <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Conseillère immo à Nantes</p>
-                    </div>
-                  </div>
-                  <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
-                    <p>Avant notre collaboration, Dorothée faisait <span className="gold-gradient-text font-semibold">difficilement 7 ventes</span> par an <span className="whitespace-nowrap">sur LinkedIn et Facebook.</span></p>
-                    <p>Dès qu'on a pris en charge sa visibilité avec nos contenus, <span className="whitespace-nowrap">son <span className="gold-gradient-text font-semibold">activité a décollé.</span></span></p>
-                    <p className="text-white font-medium">Aujourd'hui, les réseaux sociaux représentent 90 % de son business. Elle fait <span className="gold-gradient-text font-semibold whitespace-nowrap">15 ventes par an</span> tout en profitant de <span className="gold-gradient-text font-semibold whitespace-nowrap">70 jours de vacances.</span></p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.3}>
-              <div className="glass-panel p-8 md:p-12 rounded-2xl hover:border-primary/30 transition-all duration-500 flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
-                <div className="w-full md:w-1/3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8">
-                  <div className="gold-gradient-text text-5xl md:text-6xl font-heading font-light mb-2 group-hover:scale-105 transition-transform origin-center md:origin-left">40k €</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-[0.2em] font-body">de CA sur LinkedIn</div>
-                </div>
-                <div className="w-full md:w-2/3">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 shrink-0">
-                      <img src="/images/sabrina.jpg" alt="Sabrina Hamoumou" className="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-heading text-white">Sabrina Hamoumou</h3>
-                      <p className="text-xs uppercase tracking-widest text-primary/80 font-body">Conseillère immo à Clermont</p>
-                    </div>
-                  </div>
-                  <div className="space-y-4 text-gray-300 font-light text-sm leading-relaxed">
-                    <p>Avant de se lancer dans les vidéos IA, nous publiions les <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">posts LinkedIn</span> de Sabrina.</span></p>
-                    <p>Avec simplement du texte et des images, nous avons réussi à <span className="whitespace-nowrap">lui générer <span className="gold-gradient-text font-semibold">40 000 €.</span></span></p>
-                    <p className="text-white font-medium">Aujourd'hui, elle vient de se dupliquer virtuellement et a atteint les <span className="gold-gradient-text font-semibold whitespace-nowrap">82 812 vues</span> sur ses <span className="whitespace-nowrap">30 premiers jours de vidéo.</span></p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
           </div>
         </div>
       </section>
@@ -211,41 +279,40 @@ export default function Home() {
       {/* SECTION 5 : COMMENT ÇA MARCHE */}
       <section id="comment-ca-marche" className="py-32 lg:py-48 bg-bg relative">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-32">
+          <div className="text-center mb-20">
             <FadeIn>
+              <p
+                className="font-heading mb-6"
+                style={{ textTransform: 'uppercase', letterSpacing: 2.5, fontSize: 11, color: '#8a7560' }}
+              >
+                Comment ça marche
+              </p>
               <h2 className="text-4xl md:text-6xl font-heading font-light mb-6 tracking-tight text-balance">Une photo. Trois étapes. <span className="italic gold-gradient-text">Zéro effort.</span></h2>
             </FadeIn>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-[1px] bg-white/10 z-0"></div>
-            
-            <FadeIn delay={0.1}>
-              <div className="text-center relative z-10">
-                <div className="w-24 h-24 rounded-full bg-surface border border-white/10 text-gray-300 flex items-center justify-center text-3xl font-heading font-light mx-auto mb-10 transition-all duration-500 hover:border-primary/50 hover:text-primary hover:shadow-[0_0_30px_rgba(194,129,53,0.2)]">1</div>
-                <h3 className="text-2xl font-heading mb-6 text-white text-balance">Envoyez une photo et <span className="whitespace-nowrap">enregistrez votre voix.</span></h3>
-                <p className="text-gray-300 font-light text-sm leading-relaxed text-balance">C'est tout ce qu'on <span className="whitespace-nowrap">vous demande. <span className="gold-gradient-text font-semibold">Une seule fois.</span></span></p>
-              </div>
-            </FadeIn>
-            
-            <FadeIn delay={0.2}>
-              <div className="text-center relative z-10">
-                <div className="w-24 h-24 rounded-full bg-surface border border-white/10 text-gray-300 flex items-center justify-center text-3xl font-heading font-light mx-auto mb-10 transition-all duration-500 hover:border-primary/50 hover:text-primary hover:shadow-[0_0_30px_rgba(194,129,53,0.2)]">2</div>
-                <h3 className="text-2xl font-heading mb-6 text-white text-balance">Validez le rendu.</h3>
-                <p className="text-gray-300 font-light text-sm leading-relaxed text-balance">On vous présente les <span className="whitespace-nowrap">premiers résultats. <span className="gold-gradient-text font-semibold">Vous validez. Terminé.</span></span></p>
-              </div>
-            </FadeIn>
-            
-            <FadeIn delay={0.3}>
-              <div className="text-center relative z-10">
-                <div className="w-24 h-24 rounded-full bg-primary border border-primary text-white flex items-center justify-center text-3xl font-heading font-light mx-auto mb-10 shadow-[0_0_30px_rgba(194,129,53,0.4)]">3</div>
-                <h3 className="text-2xl font-heading mb-6 text-white text-balance">On produit et on publie. Vous n'y pensez plus.</h3>
-                <p className="text-gray-300 font-light text-sm leading-relaxed text-balance">
-                  <span className="gold-gradient-text font-semibold whitespace-nowrap">3 publications par semaine</span> sur Instagram, Facebook, LinkedIn et TikTok. <span className="text-white font-medium">1 vidéo. 1 carrousel. 1 post texte/image.</span> Production, programmation, diffusion : <span className="gold-gradient-text font-semibold whitespace-nowrap">tout est fait pour vous.</span>
-                </p>
-              </div>
-            </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-xl md:max-w-4xl mx-auto">
+            {[
+              { num: '1', node: <>Inscrivez-vous</> },
+              { num: '2', node: <>Vocal sur <BadgeWhatsApp size={12} /></> },
+              { num: '3', node: <><span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> réalise votre vidéo en 15 minutes</> },
+            ].map((step, i) => (
+              <FadeIn key={step.num} delay={i * 0.1}>
+                <div
+                  className="text-center"
+                  style={{
+                    background: 'var(--color-surface-light)',
+                    borderRadius: 10,
+                    padding: '2rem 1.5rem',
+                  }}
+                >
+                  <div className="font-heading" style={{ fontSize: 32, color: '#C28135', fontWeight: 600, marginBottom: 10 }}>
+                    {step.num}
+                  </div>
+                  <div className="text-sm text-[#f5e8d8]" style={{ lineHeight: 1.5 }}>{step.node}</div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
@@ -307,87 +374,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8 : TARIFS */}
-      <section id="offres" className="py-32 lg:py-48 bg-surface-light border-y border-white/5 relative">
+      {/* SECTION 8 : L'OFFRE MIREILLE */}
+      <section id="offre" className="py-32 lg:py-48 bg-surface-light border-y border-white/5 relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-32">
+          <div className="text-center mb-20">
             <FadeIn>
-              <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance">Nos offres</h2>
-              <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light text-balance">
-                Une photo. Votre voix. <span className="gold-gradient-text font-semibold">On s'occupe de tout le reste.</span><br/>
-                Chaque offre inclut la <span className="gold-gradient-text font-semibold">production complète</span> + la programmation et la <span className="whitespace-nowrap">diffusion sur vos réseaux.</span>
+              <p
+                className="font-heading mb-6"
+                style={{ textTransform: 'uppercase', letterSpacing: 2.5, fontSize: 11, color: '#8a7560' }}
+              >
+                L'offre Mireille
               </p>
+              <h2 className="text-4xl md:text-6xl font-heading font-light mb-8 tracking-tight text-balance">Une seule offre, <span className="italic gold-gradient-text">tout simplement.</span></h2>
             </FadeIn>
           </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-center">
-            {/* Pricing 1 */}
-            <FadeIn delay={0.1}>
-              <div className="bg-bg border border-white/5 rounded-3xl p-12 flex flex-col h-full hover:border-white/10 transition-colors duration-500">
-                <h3 className="text-2xl font-heading mb-12 gold-gradient-text">Pack 2 mois</h3>
-                <div className="mb-12 pb-12 border-b border-white/5">
-                  <div className="text-5xl font-heading font-light mb-2 text-white">1 500 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em]">HT</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">frais de création</div>
-                  <div className="text-2xl font-heading font-light mt-8 text-white">+ 200 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">HT / mois</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] mt-2 whitespace-nowrap">programmation & diffusion</div>
-                </div>
-                <ul className="space-y-6 flex-grow text-sm font-light text-gray-400">
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">30 publications</span> au total</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>10 vidéos · <span className="whitespace-nowrap">10 carrousels · 10 posts</span></span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>3 publications / semaine</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>Instagram, Facebook, LinkedIn, TikTok</span></li>
-                </ul>
-              </div>
-            </FadeIn>
-            
-            {/* Pricing 2 - Highlighted */}
-            <FadeIn delay={0.2}>
-              <div className="glass-panel border border-primary/30 rounded-3xl p-14 flex flex-col relative transform lg:-translate-y-8 shadow-[0_0_50px_rgba(194,129,53,0.15)] z-10">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#C28135] to-[#A86F2D] text-white px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] shadow-lg whitespace-nowrap">
-                  Le + populaire
-                </div>
-                <h3 className="text-2xl font-heading mb-12 gold-gradient-text">Pack 12 mois</h3>
-                <div className="mb-12 pb-12 border-b border-white/10">
-                  <div className="text-5xl font-heading font-light mb-2 text-white">4 500 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em]">HT</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">frais de création</div>
-                  <div className="text-2xl font-heading font-light mt-8 text-white">+ 200 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">HT / mois</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] mt-2 whitespace-nowrap">programmation & diffusion</div>
-                </div>
-                <ul className="space-y-6 flex-grow text-sm font-light text-gray-300">
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">180 publications</span> au total</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>60 vidéos · <span className="whitespace-nowrap">60 carrousels · 60 posts</span></span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>3 publications / semaine</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /> <span>Instagram, Facebook, LinkedIn, TikTok</span></li>
-                </ul>
-              </div>
-            </FadeIn>
 
-            {/* Pricing 3 */}
-            <FadeIn delay={0.3}>
-              <div className="bg-bg border border-white/5 rounded-3xl p-12 flex flex-col h-full hover:border-white/10 transition-colors duration-500">
-                <h3 className="text-2xl font-heading mb-12 gold-gradient-text">Pack 6 mois</h3>
-                <div className="mb-12 pb-12 border-b border-white/5">
-                  <div className="text-5xl font-heading font-light mb-2 text-white">3 600 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em]">HT</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">frais de création</div>
-                  <div className="text-2xl font-heading font-light mt-8 text-white">+ 200 € <span className="text-[10px] font-body text-gray-300 uppercase tracking-[0.2em] whitespace-nowrap">HT / mois</span></div>
-                  <div className="text-[10px] text-gray-300 uppercase tracking-[0.2em] mt-2 whitespace-nowrap">programmation & diffusion</div>
-                </div>
-                <ul className="space-y-6 flex-grow text-sm font-light text-gray-400">
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span className="whitespace-nowrap"><span className="gold-gradient-text font-semibold">90 publications</span> au total</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>30 vidéos · <span className="whitespace-nowrap">30 carrousels · 30 posts</span></span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>3 publications / semaine</span></li>
-                  <li className="flex items-start gap-4"><CheckCircle2 className="w-5 h-5 text-primary/80 shrink-0" /> <span>Instagram, Facebook, LinkedIn, TikTok</span></li>
-                </ul>
+          <FadeIn delay={0.1}>
+            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-14 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)]">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#C28135] to-[#A86F2D] text-white px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] shadow-lg whitespace-nowrap">
+                Simple & transparent
               </div>
-            </FadeIn>
-          </div>
-          
-          <FadeIn delay={0.4}>
-            <div className="mt-20 text-center">
-              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
-                Je me dédouble grâce à l'IA
-              </a>
+
+              <div className="mb-10 pt-4">
+                <div className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2">200 € <span className="text-lg font-body text-gray-300">HT / mois</span></div>
+              </div>
+
+              <ul className="space-y-5 text-left max-w-sm mx-auto mb-10">
+                <li className="flex items-start gap-4 text-sm font-light text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><span className="gold-gradient-text font-semibold">10 minutes de vidéos par mois</span> via WhatsApp</span>
+                </li>
+                <li className="flex items-start gap-4 text-sm font-light text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span>Engagement <span className="gold-gradient-text font-semibold">12 mois</span></span>
+                </li>
+              </ul>
+
+              {/* Tampon Garantie */}
+              <div
+                className="mx-auto mb-10 flex items-center justify-center gap-3"
+                style={{
+                  border: '2px solid #C28135',
+                  borderRadius: 12,
+                  padding: '14px 24px',
+                  maxWidth: 360,
+                  background: 'rgba(194,129,53,0.06)',
+                }}
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="shrink-0">
+                  <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(194,129,53,0.2)" stroke="#C28135" strokeWidth="1.5" />
+                  <path d="M9 12l2 2 4-4" stroke="#C28135" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span
+                  className="font-heading gold-gradient-text"
+                  style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase' }}
+                >
+                  Garantie satisfait ou remboursé 14 jours
+                </span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-8 py-4 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap w-full sm:w-auto">
+                  Prendre RDV
+                </a>
+                <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-8 py-4 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap w-full sm:w-auto">
+                  <WhatsAppIcon size={18} color="#ffffff" />
+                  <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
+                  <span className="sm:hidden">Tester gratuitement</span>
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>
@@ -432,9 +488,16 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-12 py-4 md:py-6 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
-              Je me dédouble grâce à l'IA
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-4 md:py-5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
+                Prendre RDV
+              </a>
+              <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-6 md:px-10 py-4 md:py-5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap">
+                <WhatsAppIcon size={18} color="#ffffff" />
+                <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
+                <span className="sm:hidden">Tester gratuitement</span>
+              </a>
+            </div>
           </FadeIn>
         </div>
       </section>
