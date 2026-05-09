@@ -224,11 +224,11 @@ export default function Home() {
       <section className="py-16 border-y border-white/5 bg-surface-light/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight text-balance text-white">
-            <span className="gold-gradient-text font-semibold">Ils nous font confiance.</span>
+            <span className="gold-gradient-text font-semibold">Les professionnels de ces réseaux nous font confiance.</span>
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
-            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-20 w-56 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
@@ -390,7 +390,7 @@ export default function Home() {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-primary" fill="currentColor" />)}
               </div>
               <blockquote className="text-2xl md:text-4xl font-heading font-light leading-relaxed mb-16 text-white tracking-tight italic text-balance">
-                <span className="md:whitespace-nowrap">"Nos clients adorent</span> <span className="md:whitespace-nowrap">le contenu des vidéos</span> <span className="md:whitespace-nowrap">et surtout elles nous offrent</span> <span className="md:whitespace-nowrap">une <span className="gold-gradient-text font-semibold">énorme visibilité</span></span> <span className="md:whitespace-nowrap">sur les réseaux sociaux.</span> <span className="md:whitespace-nowrap">Je ne m'attendais pas</span> <span className="md:whitespace-nowrap">à obtenir un tel</span> <span className="md:whitespace-nowrap"><span className="gold-gradient-text font-semibold">retour sur investissement</span>.</span> <span className="md:whitespace-nowrap">Le tout sans jamais</span> <span className="md:whitespace-nowrap">avoir à m'en occuper.</span> <span className="md:whitespace-nowrap">Merci Idriss."</span>
+                <span className="md:whitespace-nowrap">"Nos clients adorent</span> <span className="md:whitespace-nowrap">le contenu des vidéos</span> <span className="md:whitespace-nowrap">et surtout elles nous offrent</span> <span className="md:whitespace-nowrap">une <span className="gold-gradient-text font-semibold">énorme visibilité</span></span> <span className="md:whitespace-nowrap">sur les réseaux sociaux.</span> <span className="md:whitespace-nowrap">Je ne m'attendais pas</span> <span className="md:whitespace-nowrap">à obtenir un tel</span> <span className="md:whitespace-nowrap"><span className="gold-gradient-text font-semibold">retour sur investissement</span>.</span> <span className="md:whitespace-nowrap">Le tout sans jamais</span> <span className="md:whitespace-nowrap">avoir à m'en occuper.</span> <span className="md:whitespace-nowrap">Merci Mireille."</span>
               </blockquote>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="w-20 h-20 rounded-full bg-surface-light overflow-hidden border border-white/10 shadow-lg">
@@ -417,7 +417,7 @@ export default function Home() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-10 md:p-12 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
+            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-8 md:p-10 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
 
               {/* Sceau Garantie — Top-left exterior (desktop) */}
               <div
@@ -489,17 +489,17 @@ export default function Home() {
 
               <div className="mb-10">
                 <div
-                  className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2"
+                  className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2 flex items-center justify-center gap-3 flex-wrap"
                   style={{ filter: 'drop-shadow(0 0 30px rgba(194,129,53,0.6)) drop-shadow(0 0 60px rgba(194,129,53,0.3))' }}
                 >
-                  200 € <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>HT / mois</span>
+                  <span>10 minutes de vidéos</span> <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>/ mois</span> <BadgeWhatsApp size={13} />
                 </div>
               </div>
 
               <ul className="space-y-5 text-left max-w-sm mx-auto mb-10">
                 <li className="flex items-start gap-4 text-base sm:text-lg md:text-xl font-light text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
-                  <span><span className="gold-gradient-text font-semibold">10 minutes de vidéos par mois</span> via <BadgeWhatsApp size={13} /></span>
+                  <span><span className="gold-gradient-text font-semibold">200 € HT</span> / mois</span>
                 </li>
                 <li className="flex items-start gap-4 text-base sm:text-lg md:text-xl font-light text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
