@@ -89,16 +89,17 @@ function BadgeWhatsAppHero() {
 }
 
 function BadgeWhatsApp({ size = 13 }: { size?: number }) {
+  const isLarge = size >= 20;
   return (
     <span
       className="inline-flex items-center align-middle rounded-full"
       style={{
         background: 'rgba(37,211,102,0.12)',
         color: '#25d366',
-        padding: '2px 9px',
+        padding: isLarge ? '4px 14px' : '2px 9px',
         fontSize: size,
         fontWeight: 500,
-        gap: 4,
+        gap: isLarge ? 8 : 4,
       }}
     >
       <WhatsAppIcon size={size} color="#25d366" />
@@ -417,7 +418,7 @@ export default function Home() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="max-w-lg mx-auto glass-panel border border-primary/30 rounded-3xl p-8 md:p-10 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
+            <div className="max-w-md mx-auto glass-panel border border-primary/30 rounded-3xl p-6 md:p-8 text-center relative shadow-[0_0_50px_rgba(194,129,53,0.15)] overflow-visible">
 
               {/* Sceau Garantie — Top-left exterior (desktop) */}
               <div
@@ -492,7 +493,7 @@ export default function Home() {
                   className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2 flex items-center justify-center gap-3 flex-wrap"
                   style={{ filter: 'drop-shadow(0 0 30px rgba(194,129,53,0.6)) drop-shadow(0 0 60px rgba(194,129,53,0.3))' }}
                 >
-                  <span className="md:whitespace-nowrap">10 minutes</span>{" "}<span className="md:whitespace-nowrap">de vidéos <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>/ mois</span></span>{" "}<span className="md:whitespace-nowrap">via <BadgeWhatsApp size={13} /></span>
+                  <span className="md:whitespace-nowrap">10 minutes</span>{" "}<span className="md:whitespace-nowrap">de vidéos / mois</span>{" "}<span className="md:whitespace-nowrap">via <BadgeWhatsApp size={28} /></span>
                 </div>
               </div>
 
