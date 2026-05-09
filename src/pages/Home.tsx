@@ -228,7 +228,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
             <img src="/images/logo-orpi.png" alt="Orpi" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
-            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
+            <img src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1778245773/logotype-665723940654c-removebg-preview_twlvqu.png" alt="Century 21" className="h-16 w-auto sm:h-24 md:h-40 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-iad.png" alt="IAD" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-kw.png" alt="Keller Williams" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
             <img src="/images/logo-safti.png" alt="SAFTI" className="h-10 w-28 object-contain opacity-100 hover:scale-105 transition-transform" />
@@ -363,8 +363,8 @@ export default function Home() {
             </div>
             <div className="w-full lg:w-3/5">
               <FadeIn delay={0.2}>
-                <span className="text-primary/80 font-body tracking-[0.3em] uppercase text-xs mb-8 block">Le fondateur</span>
-                <h2 className="text-4xl md:text-6xl font-heading font-light mb-12 tracking-tight">Le fondateur <span className="italic gold-gradient-text">de Mireille</span></h2>
+                <h2 className="text-4xl md:text-6xl font-heading font-light mb-4 tracking-tight"><span className="italic gold-gradient-text">Idriss Drira</span></h2>
+                <p className="text-lg md:text-xl text-gray-400 font-light mb-12">Le fondateur <span className="italic gold-gradient-text font-semibold">de Mireille</span></p>
                 <div className="space-y-6 text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed">
                   <p>De 2017 à 2022, j'étais chasseur d'appartements à Paris. Je connais ce <span className="gold-gradient-text font-semibold">métier de l'intérieur</span> : la pression des mandats, les rendez-vous qui ne convertissent pas, <span className="whitespace-nowrap">le temps qui manque toujours.</span></p>
                   <p>Pendant le confinement, je me lance sur LinkedIn. En 3 mois, ma communauté passe de 240 à 7 000 abonnés. Mon profil devient un vrai levier de business. Je comprends une chose : <span className="gold-gradient-text font-semibold whitespace-nowrap">dans l'immobilier, celui qui est visible gagne.</span></p>
@@ -421,7 +421,7 @@ export default function Home() {
 
               {/* Sceau Garantie — Top-left exterior (desktop) */}
               <div
-                className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 hidden md:flex z-20"
+                className="absolute top-0 left-0 -translate-x-2/3 -translate-y-1/3 hidden md:flex z-20"
               >
                 <div
                   className="relative flex items-center justify-center"
@@ -492,7 +492,7 @@ export default function Home() {
                   className="text-5xl md:text-6xl font-heading font-light gold-gradient-text mb-2 flex items-center justify-center gap-3 flex-wrap"
                   style={{ filter: 'drop-shadow(0 0 30px rgba(194,129,53,0.6)) drop-shadow(0 0 60px rgba(194,129,53,0.3))' }}
                 >
-                  <span>10 minutes de vidéos</span> <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>/ mois</span> <BadgeWhatsApp size={13} />
+                  <span className="md:whitespace-nowrap">10 minutes</span>{" "}<span className="md:whitespace-nowrap">de vidéos <span className="text-lg font-body text-gray-300" style={{ filter: 'none' }}>/ mois</span></span>{" "}<span className="md:whitespace-nowrap">via <BadgeWhatsApp size={13} /></span>
                 </div>
               </div>
 
