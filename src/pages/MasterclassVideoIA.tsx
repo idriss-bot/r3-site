@@ -82,12 +82,12 @@ export default function MasterclassVideoIA() {
 
             {/* Video */}
             <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <iframe
+              <video
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/N49Yz8aGsXc"
-                title="Masterclass Vidéo 100% IA"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1778427675/Masterclass_19_mai_2026_qx65oq.mp4"
+                controls
+                playsInline
+                preload="metadata"
               />
             </div>
 
