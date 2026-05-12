@@ -172,10 +172,6 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-3 z-50">
-            <a href="/inscription-mireille" className="hidden md:inline-flex items-center gap-2 border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-4 py-3 rounded-full text-[10px] uppercase tracking-[0.15em] transition-all duration-300">
-              <WhatsAppIcon size={14} color="#25D366" />
-              Tester Mireille Gratuitement
-            </a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="hidden md:block border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-3 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300">
               Prendre rendez-vous
             </a>
@@ -193,9 +189,6 @@ export default function Home() {
             <a href="#offre" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-primary text-lg font-heading transition-colors">L'offre</a>
             <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:bg-white hover:text-bg text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full mt-4 block text-center">
               Prendre rendez-vous
-            </a>
-            <a href="/inscription-mireille" onClick={() => setIsMobileMenuOpen(false)} className="border border-whatsapp/40 hover:bg-whatsapp/10 hover:border-whatsapp text-whatsapp px-8 py-4 rounded-full text-xs uppercase tracking-[0.15em] transition-all duration-300 w-full flex items-center justify-center text-center">
-              Tester Mireille Gratuitement
             </a>
           </div>
         )}
@@ -221,11 +214,6 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center gap-4">
                 <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                   Prendre RDV
-                </a>
-                <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap">
-                  <WhatsAppIcon size={18} color="#ffffff" />
-                  <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
-                  <span className="sm:hidden">Tester gratuitement</span>
                 </a>
               </div>
             </FadeIn>
@@ -527,11 +515,6 @@ export default function Home() {
                 <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-8 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap w-full sm:w-auto">
                   Prendre RDV
                 </a>
-                <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-8 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap w-full sm:w-auto">
-                  <WhatsAppIcon size={18} color="#ffffff" />
-                  <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
-                  <span className="sm:hidden">Tester gratuitement</span>
-                </a>
               </div>
             </div>
           </FadeIn>
@@ -580,11 +563,6 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-4">
               <a href="https://taap.it/VyWVAII" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center shadow-[0_0_40px_rgba(194,129,53,0.3)] hover:shadow-[0_0_60px_rgba(194,129,53,0.5)] whitespace-nowrap">
                 Prendre RDV
-              </a>
-              <a href="/inscription-mireille" className="bg-whatsapp hover:bg-whatsapp-hover text-white px-6 md:px-10 py-3 md:py-3.5 min-h-[48px] rounded-full text-[13px] md:text-base font-heading font-bold transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.5)] whitespace-nowrap">
-                <WhatsAppIcon size={18} color="#ffffff" />
-                <span className="hidden sm:inline">Tester Mireille Gratuitement</span>
-                <span className="sm:hidden">Tester gratuitement</span>
               </a>
             </div>
           </FadeIn>
