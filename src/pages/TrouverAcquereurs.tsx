@@ -80,7 +80,7 @@ export default function TrouverAcquereurs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
 
             {/* Photo */}
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg w-1/2 mx-auto">
               <img
                 className="w-full h-auto"
                 src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1779704273/photo_plein_pied_rz0jpa.jpg"
