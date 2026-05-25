@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import MasterclassVideoIA from './pages/MasterclassVideoIA';
 import InscriptionMireille from './pages/InscriptionMireille';
+import TrouverAcquereurs from './pages/TrouverAcquereurs';
 import CGU from './pages/CGU';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/masterclass-video-ia" element={<MasterclassVideoIA />} />
+        <Route path="/trouver-acquereurs-anne-boucaut-basso" element={<TrouverAcquereurs />} />
         <Route path="/inscription-mireille" element={<InscriptionMireille />} />
         <Route path="/cgu" element={<CGU />} />
       </Routes>
