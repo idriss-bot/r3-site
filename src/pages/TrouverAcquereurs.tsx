@@ -83,7 +83,7 @@ export default function TrouverAcquereurs() {
             <div className="rounded-2xl overflow-hidden shadow-lg w-1/2 mx-auto">
               <img
                 className="w-full h-auto"
-                src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1779704273/photo_plein_pied_rz0jpa.jpg"
+                src="https://res.cloudinary.com/dvpvig9ww/image/upload/v1780662989/WEBINAIRE_1_op5xza.png"
                 alt="Anne Boucaut-Basso"
                 loading="eager"
               />
@@ -130,7 +130,7 @@ export default function TrouverAcquereurs() {
                         Inscription en cours...
                       </>
                     ) : (
-                      'Je m\'inscris gratuitement'
+                      'Je reçois le replay'
                     )}
                   </button>
 
