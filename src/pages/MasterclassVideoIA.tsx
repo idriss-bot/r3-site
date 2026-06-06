@@ -84,7 +84,7 @@ export default function MasterclassVideoIA() {
             <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full"
-                src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1778427675/Masterclass_19_mai_2026_qx65oq.mp4"
+                src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1780740637/workshop_xlxiue.mp4"
                 controls
                 playsInline
                 preload="metadata"
