@@ -29,7 +29,7 @@ export default function MasterclassVideoIA() {
         body: JSON.stringify({
           email: email.trim().toLowerCase(),
           attributes: { PRENOM: prenom.trim() },
-          listIds: [40],
+          listIds: [42],
           updateEnabled: true,
         }),
       });
