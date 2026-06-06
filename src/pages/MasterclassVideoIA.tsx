@@ -81,9 +81,9 @@ export default function MasterclassVideoIA() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
 
             {/* Video */}
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+            <div className="aspect-[9/16] max-h-[500px] mx-auto rounded-2xl overflow-hidden shadow-lg">
               <video
-                className="w-full h-full"
+                className="w-full h-full object-cover"
                 src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1780741841/workshop_fjsad0.mp4"
                 controls
                 playsInline
