@@ -69,11 +69,10 @@ export default function MasterclassVideoIA() {
           {/* Headings */}
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.1] tracking-tight text-balance">
-              Votre présence digitale ne devrait pas dépendre de <span className="italic gold-gradient-text">votre énergie</span><br />
-              <span className="inline-block mt-4 px-6 py-2 rounded-full text-xl md:text-2xl font-bold text-black tracking-wide shadow-lg" style={{background: 'linear-gradient(to right, #E8C396, #C28135)'}}>Mardi 16 juin 2026 à 12h</span>
+              Créez facilement vos vidéos de visite avec votre avatar, <span className="italic gold-gradient-text">sans caméra ni montage</span> à partir de vos photos.
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-light text-balance">
-              Le workshop gratuit qui vous montre comment vos avatars IA prennent en charge votre présence en ligne, pendant que vous restez concentré sur vos visites, votre suivi et vos mandats.
+              La méthode complète pour créer vos vidéos vous-même, sans dépendre de personne.
             </p>
           </div>
 
