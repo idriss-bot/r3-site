@@ -71,11 +71,11 @@ export default function MasterclassVideoIA() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.1] tracking-tight text-balance">
               Créez simplement des vidéos de vous façon Hollywood à partir d'une simple photo et d'un vocal <span className="italic gold-gradient-text">grâce à l'IA.</span>
             </h1>
-            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-light text-balance">
+            <p className="text-base md:text-lg text-white max-w-2xl mx-auto leading-relaxed font-light text-balance">
               Sortez du lot, captez l'attention des vendeurs et décrochez plus de mandats.
             </p>
-            <div className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-full border border-primary/40 bg-primary/10 shadow-[0_0_20px_rgba(194,129,53,0.15)]">
-              <span className="text-primary font-heading text-sm md:text-base tracking-wide">Mardi 7 juillet à 12h</span>
+            <div className="inline-flex items-center gap-2 mt-5 px-8 py-3.5 rounded-full border border-primary bg-primary/20 shadow-[0_0_30px_rgba(194,129,53,0.35)]">
+              <span className="text-white font-heading text-sm md:text-base tracking-wide">📅 Mardi 7 juillet à 12h</span>
             </div>
           </div>
 
