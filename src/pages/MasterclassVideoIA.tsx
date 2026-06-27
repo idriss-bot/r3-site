@@ -69,11 +69,14 @@ export default function MasterclassVideoIA() {
           {/* Headings */}
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.1] tracking-tight text-balance">
-              Créez facilement vos vidéos de visite avec votre avatar, <span className="italic gold-gradient-text">sans caméra ni montage</span> à partir de vos photos.
+              Créez simplement des vidéos de vous façon Hollywood à partir d'une simple photo et d'un vocal <span className="italic gold-gradient-text">grâce à l'IA.</span>
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-light text-balance">
-              La méthode complète pour créer vos vidéos vous-même, sans dépendre de personne.
+              Sortez du lot, captez l'attention des vendeurs et décrochez plus de mandats.
             </p>
+            <div className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-full border border-primary/40 bg-primary/10 shadow-[0_0_20px_rgba(194,129,53,0.15)]">
+              <span className="text-primary font-heading text-sm md:text-base tracking-wide">Mardi 7 juillet à 12h</span>
+            </div>
           </div>
 
           {/* Image + Form — side by side on desktop */}
@@ -83,7 +86,7 @@ export default function MasterclassVideoIA() {
             <div className="aspect-[9/16] max-h-[500px] mx-auto rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
-                src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1780741841/workshop_fjsad0.mp4"
+                src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/WhatsApp%20Video%202026-06-26%20at%2014.29.46.mp4"
                 controls
                 playsInline
                 preload="metadata"
