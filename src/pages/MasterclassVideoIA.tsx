@@ -86,7 +86,7 @@ export default function MasterclassVideoIA() {
             <div className="aspect-[9/16] max-h-[500px] mx-auto rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
-                src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/WhatsApp%20Video%202026-06-26%20at%2014.29.46.mp4"
+                src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/Vid%C3%A9o%20Dembele.mp4"
                 controls
                 playsInline
                 preload="metadata"
