@@ -83,7 +83,7 @@ export default function MasterclassVideoIA() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
 
             {/* Video */}
-            <div className="aspect-[9/16] max-h-[500px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <div className="aspect-video mx-auto rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
                 src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/Vid%C3%A9o%20Dembele.mp4"
