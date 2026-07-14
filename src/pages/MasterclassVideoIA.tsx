@@ -86,7 +86,8 @@ export default function MasterclassVideoIA() {
             <div className="aspect-video mx-auto rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
-                src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/Villa%20Marseille.mp4"
+                src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/normandie.mp4"
+                poster="/images/normandie-poster.jpg"
                 controls
                 playsInline
                 preload="metadata"
