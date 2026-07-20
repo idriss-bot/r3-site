@@ -301,7 +301,7 @@ export default function InscriptionMireille() {
               style={{ fontSize: 'clamp(22px, 4.5vw, 32px)', fontWeight: 500, lineHeight: 1.3, textWrap: 'balance' } as React.CSSProperties}
             >
               C'est parti. Créons votre avatar<br />
-              <span className="gold-gradient-text italic">vous n'allez pas en revenir</span>
+              <span className="gold-gradient-text italic">Le reste, c'est Mireille qui le fait</span>
             </h1>
           </div>
 
@@ -684,7 +684,10 @@ export default function InscriptionMireille() {
                       Envoi en cours...
                     </>
                   ) : (
-                    'Je lance Mireille'
+                    <>
+                      <WhatsAppIcon size={18} color="#000000" />
+                      Je lance Mireille
+                    </>
                   )}
                 </button>
               </div>
