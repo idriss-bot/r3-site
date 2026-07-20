@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Loader2, CheckCircle2, UploadCloud, X } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -116,9 +116,6 @@ export default function InscriptionMireille() {
     document.addEventListener('keydown', onEsc);
     return () => document.removeEventListener('keydown', onEsc);
   }, [showConfirmModal]);
-
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const onDrop = useCallback((accepted: File[], rejected: { file: File; errors: { code: string }[] }[]) => {
     setPhotoError('');
@@ -317,80 +314,6 @@ export default function InscriptionMireille() {
             <BadgeWhatsApp /> : <span style={{ whiteSpace: 'nowrap' }}>votre voix, votre avatar, votre mise en scène</span>.<br />
             Votre première vidéo arrive dans quelques minutes.
           </p>
-
-          {/* ── Badge "Première vidéo offerte" ── */}
-          <div className="flex justify-center mb-8">
-            <span
-              className="inline-flex items-center rounded-full"
-              style={{
-                background: 'rgba(194,129,53,0.08)',
-                border: '0.5px solid rgba(194,129,53,0.3)',
-                color: '#C28135',
-                padding: '6px 16px',
-                fontSize: 13,
-                fontWeight: 500,
-                gap: 10,
-              }}
-            >
-              Première vidéo offerte
-              <span style={{ width: 1, height: 14, background: 'rgba(194,129,53,0.3)', display: 'inline-block' }} />
-              <span className="inline-flex items-center" style={{ gap: 4, opacity: 0.7, fontSize: 12 }}>
-                <svg width="14" height="11" viewBox="0 0 24 18">
-                  <rect x="1" y="1" width="22" height="16" rx="2" fill="none" stroke="#C28135" strokeWidth="1.4" />
-                  <line x1="1" y1="6" x2="23" y2="6" stroke="#C28135" strokeWidth="1.4" />
-                  <line x1="3" y1="2.5" x2="21" y2="15.5" stroke="#e24b4a" strokeWidth="1.5" />
-                </svg>
-                Pas de CB requise
-              </span>
-            </span>
-          </div>
-
-          {/* ── Vidéo démo ── */}
-          <div
-            className="relative mx-auto mb-10 overflow-hidden"
-            style={{
-              maxWidth: 560,
-              aspectRatio: '16/9',
-              borderRadius: 20,
-              boxShadow: '0 0 40px rgba(194,129,53,0.3)',
-            }}
-          >
-            <video
-              ref={videoRef}
-              src="https://res.cloudinary.com/dvpvig9ww/video/upload/v1777565768/Mireille_kqzj2t.mp4"
-              preload="metadata"
-              playsInline
-              controls={isPlaying}
-              className="w-full h-full object-cover"
-            />
-            {!isPlaying && (
-              <button
-                type="button"
-                onClick={() => {
-                  videoRef.current?.play();
-                  setIsPlaying(true);
-                }}
-                className="absolute inset-0 flex items-center justify-center"
-                aria-label="Lire la vidéo"
-              >
-                <div
-                  className="flex items-center justify-center rounded-full transition-transform hover:scale-105"
-                  style={{
-                    width: 64,
-                    height: 64,
-                    background: 'rgba(194,129,53,0.85)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1.5px solid rgba(255,255,255,0.2)',
-                    boxShadow: '0 4px 24px rgba(194,129,53,0.4)',
-                  }}
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </button>
-            )}
-          </div>
 
           {/* ── Comment ça marche ── */}
           <div className="mb-10">
@@ -747,7 +670,7 @@ export default function InscriptionMireille() {
                   className="font-heading transition-opacity disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center whitespace-nowrap"
                   style={{
                     background: '#25d366',
-                    color: '#ffffff',
+                    color: '#000000',
                     padding: '13px 26px',
                     borderRadius: 10,
                     fontWeight: 500,
@@ -761,10 +684,7 @@ export default function InscriptionMireille() {
                       Envoi en cours...
                     </>
                   ) : (
-                    <>
-                      <WhatsAppIcon size={18} color="#ffffff" />
-                      Recevoir ma vidéo gratuite
-                    </>
+                    'Je lance Mireille'
                   )}
                 </button>
               </div>
