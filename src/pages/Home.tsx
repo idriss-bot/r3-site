@@ -496,7 +496,7 @@ export default function Home() {
                   className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-heading font-light gold-gradient-text mb-2 flex items-center justify-center gap-2 sm:gap-3 flex-wrap"
                   style={{ filter: 'drop-shadow(0 0 30px rgba(194,129,53,0.6)) drop-shadow(0 0 60px rgba(194,129,53,0.3))' }}
                 >
-                  <span className="whitespace-nowrap">10 minutes</span>{" "}<span className="whitespace-nowrap">de vidéos / mois</span>{" "}<span className="whitespace-nowrap">via <BadgeWhatsAppResponsive /></span>
+                  <span className="whitespace-nowrap">Jusqu'à 10 minutes</span>{" "}<span className="whitespace-nowrap">de vidéos par mois</span>{" "}<span className="whitespace-nowrap">via <BadgeWhatsAppResponsive /></span>
                 </div>
               </div>
 
