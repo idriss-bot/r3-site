@@ -543,7 +543,7 @@ export default function InscriptionMireille() {
                   style={{ maxWidth: 480 }}
                 >
                   {[
-                    { text: 'Plein pied', type: 'positive' },
+                    { text: 'Moitié du corps serré', type: 'positive' },
                     { text: 'Visage de face et éclairé', type: 'positive' },
                     { text: 'Photo couleur HD', type: 'positive' },
                     { text: 'Seul sur la photo', type: 'positive' },
@@ -585,6 +585,21 @@ export default function InscriptionMireille() {
                       <span>{critere.text}</span>
                     </div>
                   ))}
+                </div>
+
+                <div className="mb-3" style={{ textAlign: 'center' }}>
+                  <p className="text-xs text-white/50 mb-2">Exemple de photo idéale :</p>
+                  <img
+                    src="https://pub-cafafba9e69048b58316855e8ac02b43.r2.dev/r3/clients/33609744585/photo_plein_pied.jpg"
+                    alt="Exemple de photo idéale"
+                    style={{
+                      maxWidth: 200,
+                      borderRadius: 12,
+                      border: '0.5px solid rgba(194,129,53,0.3)',
+                      margin: '0 auto',
+                      display: 'block',
+                    }}
+                  />
                 </div>
 
                 {photo && photoPreview ? (
@@ -801,7 +816,7 @@ export default function InscriptionMireille() {
               style={{ marginBottom: 20 }}
             >
               {[
-                { text: 'Plein pied', type: 'positive' },
+                { text: 'Moitié du corps serré', type: 'positive' },
                 { text: 'Visage de face et éclairé', type: 'positive' },
                 { text: 'Photo couleur HD', type: 'positive' },
                 { text: 'Seul sur la photo', type: 'positive' },
