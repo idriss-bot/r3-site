@@ -303,8 +303,8 @@ export default function InscriptionMireille() {
               className="font-heading leading-tight"
               style={{ fontSize: 'clamp(22px, 4.5vw, 32px)', fontWeight: 500, lineHeight: 1.3, textWrap: 'balance' } as React.CSSProperties}
             >
-              Recevez votre vidéo IA gratuite en 15 minutes<br />
-              <span className="gold-gradient-text italic">grâce à votre avatar virtuel</span>
+              C'est parti. Créons votre avatar<br />
+              <span className="gold-gradient-text italic">vous n'allez pas en revenir</span>
             </h1>
           </div>
 
@@ -313,10 +313,9 @@ export default function InscriptionMireille() {
             className="text-center mx-auto mb-6 text-white/70"
             style={{ fontSize: 15, lineHeight: 1.7, maxWidth: 560, textWrap: 'balance' } as React.CSSProperties}
           >
-            Envoyez un vocal et une photo sur{' '}
-            <BadgeWhatsApp />.<br />
-            <span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> s'occupe de tout : <span style={{ whiteSpace: 'nowrap' }}>voix, création de votre avatar, mise en scène</span>.<br />
-            Vous recevez une vidéo prête à publier <span style={{ whiteSpace: 'nowrap' }}>sur tous vos réseaux</span>.
+            Une photo, quelques infos, et <span className="gold-gradient-text" style={{ fontWeight: 600 }}>Mireille</span> prend le relais sur{' '}
+            <BadgeWhatsApp /> : <span style={{ whiteSpace: 'nowrap' }}>votre voix, votre avatar, votre mise en scène</span>.<br />
+            Votre première vidéo arrive dans quelques minutes.
           </p>
 
           {/* ── Badge "Première vidéo offerte" ── */}
