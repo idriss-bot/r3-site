@@ -75,13 +75,13 @@ export default function PostParJour() {
               <br className="md:hidden" />{' '}
               <span className="inline-block">Et si c'était votre tour&nbsp;?</span>
             </h1>
-            <h2 className="text-base md:text-lg text-white max-w-2xl mx-auto leading-relaxed font-light">
-              <span className="inline-block">Recevez gratuitement</span>{' '}
-              <span className="inline-block">1&nbsp;post prêt-à-publier par&nbsp;jour</span>{' '}
-              <span className="inline-block">pendant 10&nbsp;jours.</span>
+            <h2 className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-loose font-light">
+              <span className="inline-block">Recevez <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">gratuitement</mark></span>{' '}
+              <span className="inline-block gold-gradient-text font-medium">1&nbsp;post prêt-à-publier par&nbsp;jour</span>{' '}
+              <span className="inline-block">pendant <span className="font-medium text-white">10&nbsp;jours.</span></span>
               <br className="md:hidden" />{' '}
-              <span className="inline-block">Copiez-collez, publiez facilement</span>{' '}
-              <span className="inline-block">et obtenez des résultats rapidement.</span>
+              <span className="inline-block">Copiez-collez, publiez <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">facilement</mark></span>{' '}
+              <span className="inline-block">et obtenez des résultats <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">rapidement.</mark></span>
             </h2>
           </div>
 
