@@ -67,11 +67,21 @@ export default function PostParJour() {
 
           {/* Headings */}
           <div className="text-center mb-8 md:mb-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.1] tracking-tight text-balance">
-              1 700 likes sur un post copié-collé en 2 minutes, <span className="italic gold-gradient-text">pendant ses vacances.</span> Et si c'était votre tour ?
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.15] tracking-tight">
+              <span className="inline-block">1&nbsp;700&nbsp;likes</span>{' '}
+              <span className="inline-block">sur un post copié-collé</span>{' '}
+              <span className="inline-block">en 2&nbsp;minutes,</span>{' '}
+              <span className="italic gold-gradient-text inline-block">pendant ses vacances.</span>
+              <br className="md:hidden" />{' '}
+              <span className="inline-block">Et si c'était votre tour&nbsp;?</span>
             </h1>
-            <h2 className="text-base md:text-lg text-white max-w-2xl mx-auto leading-relaxed font-light text-balance">
-              Recevez gratuitement 1 post prêt-à-publier par jour pendant 10 jours. Copiez-collez, publiez facilement et obtenez des résultats rapidement.
+            <h2 className="text-base md:text-lg text-white max-w-2xl mx-auto leading-relaxed font-light">
+              <span className="inline-block">Recevez gratuitement</span>{' '}
+              <span className="inline-block">1&nbsp;post prêt-à-publier par&nbsp;jour</span>{' '}
+              <span className="inline-block">pendant 10&nbsp;jours.</span>
+              <br className="md:hidden" />{' '}
+              <span className="inline-block">Copiez-collez, publiez facilement</span>{' '}
+              <span className="inline-block">et obtenez des résultats rapidement.</span>
             </h2>
           </div>
 
@@ -88,7 +98,13 @@ export default function PostParJour() {
                 />
               </div>
               <p className="text-sm text-gray-400 font-light leading-relaxed text-center">
-                Caroline a copié-collé ce post pendant ses vacances, ajouté une photo d'elle, puis elle est retournée prendre l'apéro. Résultat : <span className="text-primary font-medium">+1 700 likes et 133 partages.</span>
+                <span className="inline-block">Caroline a copié-collé ce&nbsp;post</span>{' '}
+                <span className="inline-block">pendant ses vacances,</span>{' '}
+                <span className="inline-block">ajouté une photo d'elle,</span>{' '}
+                <span className="inline-block">puis elle est retournée</span>{' '}
+                <span className="inline-block">prendre l'apéro.</span>
+                <br />{' '}
+                <span className="inline-block">Résultat&nbsp;: <span className="text-primary font-medium">+1&nbsp;700&nbsp;likes et 133&nbsp;partages.</span></span>
               </p>
             </div>
 
@@ -125,7 +141,7 @@ export default function PostParJour() {
                   <button
                     type="submit"
                     disabled={!isValid || loading}
-                    className="w-full bg-primary hover:bg-primary-hover text-white py-4 rounded-full font-heading text-sm tracking-wide transition-all duration-300 shadow-[0_0_30px_rgba(194,129,53,0.25)] hover:shadow-[0_0_50px_rgba(194,129,53,0.4)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 mt-1"
+                    className="w-full bg-primary hover:bg-primary-hover text-white px-8 py-5 rounded-full font-heading text-base tracking-wide transition-all duration-300 shadow-[0_0_30px_rgba(194,129,53,0.25)] hover:shadow-[0_0_50px_rgba(194,129,53,0.4)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 mt-1"
                   >
                     {loading ? (
                       <>
