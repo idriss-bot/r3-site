@@ -101,19 +101,19 @@ export default function TraiteLucidite() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">✦</span>
-                    <span>Pourquoi le bouche-à-oreille et la prospection terrain <span className="text-white/80">ne suffisent plus à remplir votre pipeline</span></span>
+                    <span>Les résultats d'une expérimentation menée avec <span className="text-white/80">70&nbsp;agents immobiliers</span> entre 2023 et 2025, en France, Suisse, Belgique et Luxembourg</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">✦</span>
-                    <span>Ce que les agents qui cartonnent aujourd'hui <span className="text-white/80">font différemment de vous</span></span>
+                    <span>Pourquoi <span className="text-white/80">63,6&nbsp;% des agents accompagnés</span> ont constaté une hausse de 30 à 50&nbsp;% de leurs mandats — grâce aux recommandations, pas aux contacts directs</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">✦</span>
-                    <span>Comment <span className="text-white/80">capitaliser sur votre expérience</span> pour devenir visible en ligne, sans y passer des heures</span>
+                    <span>Comment un directeur d'agence est passé de <span className="text-white/80">59 à 101&nbsp;mandats en un an</span>, sans changer son organisation — juste sa visibilité</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">✦</span>
-                    <span>Le piège dans lequel tombent ceux qui pensent que <span className="text-white/80">« ça finira par revenir comme avant »</span></span>
+                    <span>Pourquoi les réseaux sociaux ne sont pas un canal d'acquisition, mais <span className="text-white/80">un amplificateur de votre réseau existant</span> — et comment le mesurer autrement</span>
                   </li>
                 </ul>
               </div>
