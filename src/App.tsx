@@ -6,6 +6,7 @@ import TrouverAcquereurs from './pages/TrouverAcquereurs';
 import CGU from './pages/CGU';
 import PostParJour from './pages/PostParJour';
 import BootcampLinkedin from './pages/BootcampLinkedin';
+import TraiteLucidite from './pages/TraiteLucidite';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/inscription-mireille" element={<InscriptionMireille />} />
         <Route path="/1-post-par-jour-pendant-10-jours" element={<PostParJour />} />
         <Route path="/bootcamp-linkedin-ete" element={<BootcampLinkedin />} />
+        <Route path="/traite-de-lucidite" element={<TraiteLucidite />} />
         <Route path="/cgu" element={<CGU />} />
       </Routes>
     </BrowserRouter>
