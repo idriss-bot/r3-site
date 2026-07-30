@@ -68,9 +68,10 @@ export default function PostParJour() {
           {/* Headings */}
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.15] tracking-tight">
-              <span className="inline-block">1&nbsp;700&nbsp;likes</span>{' '}
-              <span className="inline-block">sur un post copié-collé</span>{' '}
-              <span className="inline-block">en 2&nbsp;minutes,</span>{' '}
+              <span className="inline-block">Cette conseillère immo a fait</span>{' '}
+              <span className="inline-block">246&nbsp;000&nbsp;vues, 1&nbsp;700&nbsp;likes</span>{' '}
+              <span className="inline-block">avec un simple post</span>{' '}
+              <span className="inline-block">qu'elle a copié-collé en 2&nbsp;minutes,</span>{' '}
               <span className="italic gold-gradient-text inline-block">pendant ses vacances.</span>
               <br className="md:hidden" />{' '}
               <span className="inline-block">Et si c'était votre tour&nbsp;?</span>
