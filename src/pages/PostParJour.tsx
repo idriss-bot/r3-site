@@ -69,12 +69,12 @@ export default function PostParJour() {
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light mb-4 leading-[1.15] tracking-tight">
               <span className="inline-block">Cette conseillère immo a fait</span>{' '}
-              <span className="inline-block">246&nbsp;000&nbsp;vues, 1&nbsp;700&nbsp;likes</span>{' '}
-              <span className="inline-block">avec un simple post</span>{' '}
-              <span className="inline-block">qu'elle a copié-collé en 2&nbsp;minutes,</span>{' '}
+              <span className="inline-block gold-gradient-text font-medium">246&nbsp;000&nbsp;vues, 1&nbsp;700&nbsp;likes</span>{' '}
+              <span className="inline-block">avec un <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">simple post</mark></span>{' '}
+              <span className="inline-block">qu'elle a copié-collé en <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">2&nbsp;minutes,</mark></span>{' '}
               <span className="italic gold-gradient-text inline-block">pendant ses vacances.</span>
               <br className="md:hidden" />{' '}
-              <span className="inline-block">Et si c'était votre tour&nbsp;?</span>
+              <span className="inline-block">Et si c'était <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">votre tour</mark>&nbsp;?</span>
             </h1>
             <h2 className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-loose font-light">
               <span className="inline-block">Recevez <mark className="bg-primary/20 text-white px-1.5 py-0.5 rounded-md font-medium">gratuitement</mark></span>{' '}
